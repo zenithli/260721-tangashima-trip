@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>男鹿島リゾート · 瀬戸内 家島の島旅（7/21–7/22）</title>
+<meta name="description" content="12人（9大人+3小学生・3家庭）从关西自驾到姫路港、乘船约30分上男鹿島（たんがしま）：海水浴、钓鱼、定置網渔业体验、中村水産海鲜、环岛观光">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#22343a; --ink-soft:#48606a; --muted:#7b8d94;
+    --cream:#f2fbfd; --cream-deep:#d8eef2; --paper:#fbfefe;
+    --gold:#d9a441; --gold-deep:#8a6420; --gold-light:#e8c87f;
+    --green:#4f8f6a; --green-deep:#356048; --green-soft:#9ec7a8;
+    --azalea:#d85c72; --azalea-soft:#f5c2cb;
+    --brown:#7a593f; --brown-light:#c4a584;
+    --sea:#2f9fb8; --sea-deep:#1c6f86; --sea-light:#7fd0dd;
+    --navy:#173a44; --steel:#2f6070;
+    --line:rgba(34,52,58,0.10); --line-warm:rgba(47,159,184,0.28);
+    --shadow-lg:0 24px 60px rgba(28,60,68,0.18);
+    --shadow-md:0 14px 36px rgba(28,60,68,0.12);
+    --shadow-sm:0 6px 18px rgba(28,60,68,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    color:var(--ink); line-height:1.78; font-size:15.5px;
+    background:var(--cream); overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 12% 10%, rgba(47,159,184,0.06) 0%, transparent 45%),
+      radial-gradient(circle at 88% 92%, rgba(79,143,106,0.05) 0%, transparent 45%);
+  }
+  .enter-overlay{position:fixed; inset:0; z-index:2000; display:flex; align-items:center; justify-content:center; padding:28px; cursor:pointer;
+    background:radial-gradient(ellipse at 20% 25%, rgba(127,208,221,0.18) 0%, transparent 45%),radial-gradient(ellipse at 80% 80%, rgba(28,111,134,0.28) 0%, transparent 45%),linear-gradient(135deg, #0b2530 0%, #143943 50%, #0d2a33 100%);
+    transition:opacity .65s ease, visibility .65s ease;}
+  .enter-overlay.hidden{opacity:0; visibility:hidden; pointer-events:none}
+  .enter-card{text-align:center; max-width:620px; color:#eafcff; animation:enter-rise .9s cubic-bezier(.2,.7,.2,1) both;}
+  @keyframes enter-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  .enter-eyebrow{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:14px; letter-spacing:0.32em; text-transform:uppercase; color:var(--sea-light); margin-bottom:22px;}
+  .enter-name{font-family:"Noto Serif SC",serif; font-weight:500; font-size:clamp(32px,5vw,50px); line-height:1.25; letter-spacing:0.04em; margin-bottom:14px; color:#eafcff;}
+  .enter-name .accent{color:var(--sea-light); font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:500}
+  .enter-sub{font-family:"Noto Serif SC",serif; font-weight:400; font-size:15px; line-height:1.9; max-width:490px; margin:8px auto 24px; color:rgba(234,252,255,0.78);}
+  .enter-date{font-family:"JetBrains Mono",monospace; font-size:13px; letter-spacing:0.08em; color:rgba(234,252,255,0.62); border-top:1px solid rgba(234,252,255,0.18); border-bottom:1px solid rgba(234,252,255,0.18); padding:10px 22px; display:inline-block; margin-bottom:30px;}
+  .enter-btn{font-family:inherit; font-size:15px; font-weight:700; letter-spacing:0.04em; color:#08242c; background:linear-gradient(135deg, var(--sea-light) 0%, var(--sea) 100%); border:none; border-radius:40px; padding:14px 40px; cursor:pointer; display:inline-flex; align-items:center; gap:10px; box-shadow:0 10px 30px rgba(0,0,0,0.42); transition:transform .18s, box-shadow .18s; animation:enter-btn-pulse 2.8s ease-in-out infinite;}
+  .enter-btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(0,0,0,0.5)}
+  .enter-btn-ico{font-size:11px}
+  @keyframes enter-btn-pulse{0%,100%{box-shadow:0 10px 30px rgba(0,0,0,0.42)}50%{box-shadow:0 10px 30px rgba(0,0,0,0.42), 0 0 0 12px rgba(127,208,221,0.15)}}
+  .enter-hint{margin-top:18px; font-size:12px; letter-spacing:0.05em; color:rgba(234,252,255,0.42)}
+  .hero{position:relative; min-height:100vh; overflow:hidden; display:grid; place-items:center; padding:80px 18px 130px; background:linear-gradient(180deg, #bfe6f2 0%, #e8f6ee 50%, #f5eccf 100%);}
+  .sun{position:absolute; right:13%; top:13%; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle, #fffce0 0%, #ffd76b 55%, rgba(255,215,107,0) 72%); animation:sun-pulse 4.5s ease-in-out infinite;}
+  @keyframes sun-pulse{50%{transform:scale(1.06);opacity:.92}}
+  .cloud{position:absolute; background:#fff; border-radius:999px; opacity:0.85; filter:drop-shadow(0 6px 14px rgba(84,108,128,.14)); animation:cloud-drift 38s linear infinite;}
+  .cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+  .cloud.c1{width:160px;height:50px;top:11%;left:-180px}
+  .cloud.c1:before{width:78px;height:78px;left:30px;top:-32px}
+  .cloud.c1:after{width:96px;height:96px;right:18px;top:-44px}
+  .cloud.c2{width:230px;height:64px;top:22%;left:-280px;animation-duration:52s;animation-delay:5s;opacity:0.72}
+  .cloud.c2:before{width:90px;height:90px;left:42px;top:-44px}
+  .cloud.c2:after{width:110px;height:110px;right:30px;top:-54px}
+  .cloud.c3{width:140px;height:44px;top:34%;left:-160px;animation-duration:46s;animation-delay:18s;opacity:0.6}
+  .cloud.c3:before{width:66px;height:66px;left:24px;top:-28px}
+  .cloud.c3:after{width:80px;height:80px;right:14px;top:-36px}
+  @keyframes cloud-drift{to{transform:translateX(calc(100vw + 380px))}}
+  .islands-far{position:absolute; left:0; right:0; bottom:30%; height:16%; pointer-events:none; opacity:0.42; background:linear-gradient(180deg, rgba(47,96,112,0.4), rgba(47,96,112,0.7)); clip-path:polygon(0 100%, 6% 60%, 12% 78%, 20% 55%, 28% 72%, 36% 48%, 46% 70%, 55% 52%, 66% 74%, 76% 55%, 86% 72%, 94% 60%, 100% 78%, 100% 100%);}
+  .islands{position:absolute; left:0; right:0; bottom:22%; height:16%; pointer-events:none; opacity:0.75; background:linear-gradient(180deg, #4d8090 0%, #2f6070 70%, #1c6f86 100%); clip-path:polygon(0 100%, 8% 55%, 16% 72%, 26% 42%, 30% 30%, 34% 42%, 44% 68%, 54% 48%, 62% 60%, 72% 38%, 78% 26%, 84% 40%, 92% 62%, 100% 50%, 100% 100%);}
+  .sea{position:absolute; left:0; right:0; bottom:0; height:26%; background:linear-gradient(180deg, #6fc7d6 0%, #3f9fb2 55%, #2f8296 100%);}
+  .sea:after{content:""; position:absolute; inset:0; background-image:radial-gradient(circle at 14% 30%, rgba(255,255,255,0.55) 0 2px, transparent 3px),radial-gradient(circle at 30% 55%, rgba(255,255,255,0.4) 0 2px, transparent 3px),radial-gradient(circle at 48% 35%, rgba(255,255,255,0.5) 0 2px, transparent 3px),radial-gradient(circle at 66% 58%, rgba(255,255,255,0.42) 0 2px, transparent 3px),radial-gradient(circle at 82% 40%, rgba(255,255,255,0.5) 0 2px, transparent 3px); opacity:0.7; animation:shimmer 5s ease-in-out infinite;}
+  @keyframes shimmer{50%{opacity:0.35}}
+  .ferry{position:absolute; bottom:11%; left:-200px; width:150px; height:60px; animation:ferry-sail 22s linear infinite; filter:drop-shadow(0 8px 12px rgba(0,0,0,0.22));}
+  .ferry .hull{position:absolute;bottom:6px;width:150px;height:26px;border-radius:6px 40px 40px 8px/6px 26px 26px 20px;background:linear-gradient(180deg,#fff,#dfeff2);border-bottom:5px solid #1c6f86}
+  .ferry .deck{position:absolute;bottom:30px;left:22px;width:96px;height:26px;border-radius:6px 6px 0 0;background:#e9f6f9;border:3px solid #2f9fb8}
+  .ferry .funnel{position:absolute;bottom:52px;left:96px;width:16px;height:20px;border-radius:3px;background:#d85c72}
+  @keyframes ferry-sail{0%{transform:translateX(0)}100%{transform:translateX(calc(100vw + 260px))}}
+  .bird{position:absolute;font-size:18px;color:rgba(34,52,58,0.42);font-weight:700;animation:bird-fly 26s linear infinite}
+  .bird.b1{top:16%;left:-40px;animation-delay:3s}
+  .bird.b2{top:23%;left:-40px;animation-delay:13s;font-size:14px;opacity:0.7}
+  @keyframes bird-fly{0%{transform:translateX(0) translateY(0)}50%{transform:translateX(50vw) translateY(-22px)}100%{transform:translateX(105vw) translateY(0)}}
+  .hero-card{position:relative; z-index:5; max-width:760px; text-align:center; background:rgba(251,254,254,0.9); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.7); border-radius:32px; padding:44px 36px; box-shadow:var(--shadow-lg);}
+  .hero-eyebrow{font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:500; font-size:13px; letter-spacing:0.36em; text-transform:uppercase; color:var(--sea-deep); margin-bottom:14px;}
+  .hero-card h1{font-family:"Noto Serif SC",serif; font-weight:500; font-size:clamp(34px,5vw,56px); line-height:1.2; letter-spacing:0.03em; margin-bottom:16px; color:var(--ink);}
+  .hero-card h1 .accent{color:var(--sea-deep); font-family:"Cormorant Garamond","Noto Serif SC",serif; font-style:italic; font-weight:500}
+  .hero-card .deck{font-family:"Noto Serif SC",serif; font-weight:400; font-size:16px; color:var(--ink-soft); line-height:1.9; max-width:580px; margin:0 auto 22px;}
+  .hero-card .route-text{font-size:13.5px; color:var(--muted); letter-spacing:0.02em; line-height:1.95; margin-bottom:24px;}
+  .hero-card .route-text strong{color:var(--sea-deep);font-weight:600}
+  .hero-sign{position:absolute; right:5%; bottom:9%; z-index:4; width:148px; background:#fff; padding:8px 8px 6px; border-radius:6px; box-shadow:0 12px 30px rgba(0,0,0,0.28); transform:rotate(-4deg);}
+  .hero-sign img{width:100%; height:108px; object-fit:cover; border-radius:3px; display:block;}
+  .hero-sign span{display:block; text-align:center; font-family:"Cormorant Garamond",serif; font-size:11px; color:var(--ink-soft); margin-top:5px; letter-spacing:0.05em;}
+  .island-map{display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center; margin-top:6px}
+  .island-map > img{width:300px; max-width:100%; border-radius:14px; border:1px solid var(--line); background:#fff; display:block}
+  .map-legend p{font-size:14px; color:var(--ink-soft); margin-bottom:12px; line-height:1.85}
+  .map-legend ul{list-style:none; display:grid; gap:8px; margin:0 0 12px; padding:0}
+  .map-legend li{font-size:13.5px; color:var(--ink-soft)}
+  .map-legend li strong{color:var(--sea-deep)}
+  .map-legend small{color:var(--muted); font-size:11.5px}
+  .resort-movie{display:flex; justify-content:center; margin-top:6px}
+  .resort-movie video{max-height:460px; max-width:100%; border-radius:16px; box-shadow:var(--shadow-md); background:#0d1b1f; display:block}
+  @media(max-width:900px){.hero-sign{display:none}}
+  @media(max-width:680px){.island-map{grid-template-columns:1fr}.island-map > img{margin:0 auto}}
+  .hero-dates{display:inline-flex; gap:8px; align-items:baseline; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:10px 22px; font-family:"JetBrains Mono",monospace; font-size:13px; color:var(--sea-deep); letter-spacing:0.06em; font-weight:600;}
+  .music-player{display:flex; align-items:center; gap:11px; max-width:420px; margin:24px auto 0; padding:9px 16px; background:rgba(216,238,242,0.65); border:1px solid rgba(47,159,184,0.32); border-radius:40px;}
+  .mp-btn{flex-shrink:0; width:32px; height:32px; padding:0; border:none; border-radius:50%; background:linear-gradient(135deg, var(--sea-deep) 0%, var(--sea) 100%); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:11px; line-height:1; box-shadow:0 2px 8px rgba(28,111,134,0.3); transition:transform .15s;}
+  .mp-btn:hover{transform:scale(1.1)}
+  .mp-icon-play{margin-left:2px}
+  .mp-icon-pause{display:none;letter-spacing:-1px}
+  .music-player.playing .mp-icon-play{display:none}
+  .music-player.playing .mp-icon-pause{display:inline}
+  .mp-track{position:relative; flex:1; height:5px; background:rgba(34,52,58,0.14); border-radius:3px; cursor:pointer}
+  .mp-fill{position:absolute; left:0; top:0; height:100%; width:0%; background:linear-gradient(90deg, var(--sea) 0%, var(--sea-light) 100%); border-radius:3px}
+  .mp-thumb{position:absolute; top:50%; left:0%; width:13px; height:13px; transform:translate(-50%,-50%); background:#fff; border:2px solid var(--sea); border-radius:50%; box-shadow:0 1px 3px rgba(0,0,0,0.22); pointer-events:none}
+  .mp-time{flex-shrink:0; font-family:"JetBrains Mono",monospace; font-size:11px; font-weight:500; color:var(--sea-deep); min-width:78px; text-align:right}
+  .music-toggle{position:fixed; bottom:24px; right:24px; width:48px; height:48px; padding:0; background:linear-gradient(135deg, var(--navy) 0%, var(--steel) 100%); color:var(--sea-light); border:1px solid rgba(47,159,184,0.5); border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(28,60,68,0.32); transition:opacity .2s, transform .2s; z-index:999; opacity:0.88;}
+  .music-toggle:hover{opacity:1;transform:translateY(-3px)}
+  .music-toggle.paused{opacity:0.5}
+  .music-toggle.paused:hover{opacity:0.88}
+  .music-icon{font-size:20px;line-height:1}
+  .music-toggle.playing .music-icon{animation:music-pulse 1.6s ease-in-out infinite}
+  @keyframes music-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+  main{max-width:1200px; margin:-90px auto 60px; padding:0 18px; position:relative; z-index:6}
+  .section-eyebrow{font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:500; font-size:13px; letter-spacing:0.3em; text-transform:uppercase; color:var(--sea-deep); margin-bottom:8px; text-align:center;}
+  .section-title{font-family:"Noto Serif SC",serif; font-weight:500; font-size:clamp(28px,4vw,44px); line-height:1.25; letter-spacing:0.03em; margin-bottom:8px; text-align:center; color:var(--ink);}
+  .section-title .accent{color:var(--sea-deep); font-family:"Cormorant Garamond","Noto Serif SC",serif; font-style:italic}
+  .section-sub{text-align:center; color:var(--ink-soft); font-size:14.5px; line-height:1.9; max-width:680px; margin:0 auto 32px;}
+  .spots-section{margin:0 auto 60px; max-width:1200px}
+  .spot-card{background:var(--paper); border:1px solid var(--line); border-radius:28px; overflow:hidden; box-shadow:var(--shadow-md); margin-bottom:32px; display:grid; grid-template-columns:1fr 1fr; grid-template-areas:"photo body";}
+  .spot-card.featured{grid-template-columns:1.3fr 1fr}
+  .spot-card.reverse{grid-template-columns:1fr 1.3fr; grid-template-areas:"body photo"}
+  .spot-photo{grid-area:photo; position:relative; min-height:340px; overflow:hidden; background:#dceef2;}
+  .spot-photo > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s ease;}
+  .spot-card:hover .spot-photo > img{transform:scale(1.04)}
+  .spot-thumbs{position:absolute; bottom:14px; left:14px; right:14px; display:flex; gap:8px; z-index:3;}
+  .spot-thumbs img{width:60px; height:46px; object-fit:cover; border-radius:6px; border:2px solid rgba(255,255,255,0.88); box-shadow:0 2px 8px rgba(0,0,0,0.3); cursor:pointer; transition:transform .2s;}
+  .spot-thumbs img:hover{transform:scale(1.1); border-color:#fff}
+  .img-note{position:absolute; top:18px; right:14px; z-index:3; background:rgba(23,58,68,0.72); color:#eafcff; font-size:10px; letter-spacing:0.06em; padding:3px 9px; border-radius:10px; font-family:"JetBrains Mono",monospace;}
+  .photo-tag{position:absolute; top:18px; left:18px; z-index:2; background:rgba(251,254,254,0.95); color:var(--sea-deep); font-size:11px; font-weight:700; letter-spacing:0.16em; padding:6px 14px; border-radius:30px; box-shadow:0 2px 8px rgba(0,0,0,0.15);}
+  .scene{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:34px;}
+  .scene .emoji{font-size:66px; line-height:1; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.28))}
+  .scene .ja{font-family:"Cormorant Garamond",serif; font-size:34px; font-weight:500; letter-spacing:0.1em; margin-top:14px; text-shadow:0 3px 14px rgba(0,0,0,0.5)}
+  .scene .en{font-size:11px; letter-spacing:0.28em; margin-top:8px; font-family:"JetBrains Mono",monospace; opacity:0.75}
+  .scene .chip{margin-top:20px; padding:7px 18px; border:1px solid rgba(255,255,255,0.35); border-radius:24px; font-size:11px; letter-spacing:0.14em; font-family:"JetBrains Mono",monospace; opacity:0.7}
+  .spot-body{grid-area:body; padding:32px 36px; display:flex; flex-direction:column; justify-content:center;}
+  .spot-no{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:14px; letter-spacing:0.3em; text-transform:uppercase; color:var(--sea-deep); margin-bottom:10px;}
+  .spot-name{font-family:"Noto Serif SC",serif; font-weight:500; font-size:clamp(22px,2.8vw,30px); line-height:1.3; margin-bottom:8px; color:var(--ink); letter-spacing:0.02em;}
+  .spot-name .accent-line{display:block; width:36px; height:2px; background:var(--sea); margin:14px 0 16px;}
+  .spot-desc{color:var(--ink-soft); font-size:14.5px; line-height:1.9; margin-bottom:18px;}
+  .spot-desc strong{color:var(--sea-deep); font-weight:600}
+  .spot-meta{display:grid; gap:6px; padding-top:14px; border-top:1px dashed var(--line); font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--muted); line-height:1.7;}
+  .spot-meta div span{color:var(--sea-deep); font-weight:600; margin-right:6px}
+  .day-panel{background:var(--paper); border:1px solid var(--line); border-radius:28px; padding:32px 30px; margin:24px 0; box-shadow:var(--shadow-md);}
+  .day-header-row{display:flex; align-items:baseline; gap:18px; flex-wrap:wrap; border-bottom:2px solid var(--line); padding-bottom:12px; margin-bottom:20px;}
+  .day-badge{font-family:"Cormorant Garamond",serif; font-style:italic; background:linear-gradient(135deg, var(--sea-deep), var(--sea)); color:#fff; padding:6px 18px; border-radius:30px; font-size:14px; font-weight:600; letter-spacing:0.08em; box-shadow:0 3px 10px rgba(28,111,134,0.25);}
+  .day-h{font-family:"Noto Serif SC",serif; font-size:24px; font-weight:500; color:var(--ink);}
+  .day-h small{display:block; font-size:12px; color:var(--muted); font-family:"JetBrains Mono",monospace; letter-spacing:0.04em; margin-top:3px; font-weight:400;}
+  .timeline{display:grid; gap:14px}
+  .slot{display:grid; grid-template-columns:130px 1fr; grid-template-areas:"time event"; gap:18px; align-items:stretch}
+  .slot .time{grid-area:time; background:linear-gradient(135deg, var(--navy) 0%, var(--steel) 100%); color:#fff; border-radius:18px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:12px 10px; box-shadow:0 4px 12px rgba(23,58,68,0.22);}
+  .slot .time strong{font-family:"JetBrains Mono",monospace; font-size:15px; font-weight:600; letter-spacing:0.03em; line-height:1.3}
+  .slot .time em{font-style:normal; font-size:11px; opacity:0.82; margin-top:2px; letter-spacing:0.04em}
+  .slot .event{grid-area:event; background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px 20px; box-shadow:var(--shadow-sm);}
+  .slot .event h3{font-family:"Noto Serif SC",serif; font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .slot .event p{color:var(--ink-soft); font-size:14px; line-height:1.85}
+  .slot .event small{display:block; margin-top:8px; color:var(--muted); font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:0.03em;}
+  .slot.highlight .event{background:linear-gradient(135deg, #eefaf3 0%, #fff 100%); border-color:var(--line-warm);}
+  .slot.highlight .event h3{color:var(--sea-deep)}
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:6px}
+  .info-card{background:linear-gradient(135deg, var(--cream) 0%, var(--paper) 100%); border:1px solid var(--line); border-radius:18px; padding:18px 20px;}
+  .info-card .label{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--sea-deep); margin-bottom:8px;}
+  .info-card h4{font-family:"Noto Serif SC",serif; font-size:16px; font-weight:600; margin-bottom:10px; color:var(--ink);}
+  .info-card .rows{display:grid; gap:5px; font-size:13px; color:var(--ink-soft)}
+  .info-card .rows .row{display:flex; gap:8px}
+  .info-card .rows .row span{color:var(--muted); min-width:60px; flex-shrink:0}
+  .info-card .rows strong{color:var(--ink);font-weight:600}
+  .cautions-panel{background:linear-gradient(135deg, #eef9fb 0%, #dff1f4 100%); border:1px solid var(--line-warm); border-left:5px solid var(--sea);}
+  .caution-list{display:grid; gap:11px; margin-top:6px}
+  .caution-list .item{display:grid; grid-template-columns:32px 1fr; gap:10px; align-items:start; padding:11px 0; border-bottom:1px dashed rgba(47,159,184,0.3);}
+  .caution-list .item:last-child{border-bottom:none}
+  .caution-list .ico{width:26px; height:26px; border-radius:50%; background:rgba(47,159,184,0.18); color:var(--sea-deep); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700;}
+  .caution-list .text{font-size:13.5px; line-height:1.78; color:var(--ink-soft)}
+  .caution-list .text strong{color:var(--sea-deep); font-weight:600}
+  .family-band{background:linear-gradient(180deg, #eef9f2 0%, #d8eef2 100%); padding:38px 28px; border-radius:28px; position:relative; overflow:hidden; border:1px solid var(--line); margin:24px 0;}
+  .family-band .caption{text-align:center; margin-bottom:18px}
+  .family-band .caption-eyebrow{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:13px; letter-spacing:0.3em; text-transform:uppercase; color:var(--sea-deep); margin-bottom:8px;}
+  .family-band .caption-text{font-family:"Noto Serif SC",serif; font-size:18px; font-weight:500; color:var(--ink); line-height:1.7;}
+  .silhouettes{position:relative; height:150px; max-width:640px; margin:18px auto 0}
+  .silhouettes .hill{position:absolute; left:-5%; right:-5%; bottom:0; height:46px; background:linear-gradient(180deg, rgba(79,143,106,0.45), rgba(47,96,112,0.65)); border-radius:50% 50% 0 0;}
+  .person{position:absolute; bottom:28px; width:34px; height:74px; animation:bob 2.8s ease-in-out infinite}
+  .person:before{content:""; position:absolute; top:0; left:8px; width:18px; height:18px; border-radius:50%; background:#f0c29a}
+  .person:after{content:""; position:absolute; top:20px; left:4px; width:26px; height:40px; border-radius:13px 13px 8px 8px; background:var(--c)}
+  .person i{position:absolute; bottom:0; left:10px; width:5px; height:22px; background:#3a5a52; border-radius:6px; box-shadow:10px 0 0 #3a5a52; font-style:normal}
+  .person.kid{height:52px; bottom:34px; width:28px}
+  .person.kid:before{width:15px;height:15px;left:6px}
+  .person.kid:after{width:22px;height:32px;left:3px}
+  @keyframes bob{50%{transform:translateY(-7px)}}
+  footer{text-align:center; padding:40px 24px 60px; color:var(--muted); font-size:13px; border-top:1px solid var(--line); margin-top:36px;}
+  footer .footer-quote{font-family:"Noto Serif SC",serif; font-size:18px; color:var(--ink); margin-bottom:10px; line-height:1.7;}
+  footer .footer-credit{font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:0.04em; color:var(--muted); margin-top:12px;}
+  @media(max-width:840px){.spot-card,.spot-card.featured,.spot-card.reverse{grid-template-columns:1fr; grid-template-areas:"photo" "body"}.spot-photo{min-height:240px}.spot-body{padding:24px 26px}}
+  @media(max-width:680px){.hero{padding:60px 14px 100px}.slot{grid-template-columns:1fr; grid-template-areas:"time" "event"; gap:8px}.slot .time{padding:8px; flex-direction:row; gap:8px; justify-content:flex-start}.slot .time strong{font-size:14px}.day-panel{padding:24px 20px}}
+  @media print{.enter-overlay,.music-player,.music-toggle,.cloud,.bird,.ferry{display:none!important}body{background:white}.hero{min-height:auto;background:white;padding:30px 0}.day-panel,.spot-card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- ============ ENTRY OVERLAY ============ -->
+<div class="enter-overlay" id="enter-overlay" role="button" tabindex="0" aria-label="进入旅程">
+  <div class="enter-card">
+    <div class="enter-eyebrow">TANGASHIMA · IESHIMA ISLANDS · 2026</div>
+    <div class="enter-name">男鹿島リゾート<br><span class="accent">瀬戸内 · 家島の島旅</span></div>
+    <div class="enter-sub">三个家庭、12 人（9 位大人 + 3 位小学生），从关西自驾到姫路港，乘船约 30 分登上濑户内海的男鹿島（たんがしま）——海水浴、海钓、清晨定置網渔业体验、中村水産的海鲜料理、开车环岛看鹿。</div>
+    <div class="enter-date">2026 . 7 . 21 月 ——— 7 . 22 火 · 1泊2日</div>
+    <button class="enter-btn" id="enter-btn" type="button"><span class="enter-btn-ico">▶</span> 进入旅程</button>
+    <div class="enter-hint">♪ 进入后背景音乐自动播放</div>
+  </div>
+</div>
+<noscript><style>#enter-overlay{display:none!important;}</style></noscript>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="sun"></div>
+  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  <div class="bird b1">⌒</div><div class="bird b2">⌒</div>
+  <div class="islands-far"></div>
+  <div class="islands"></div>
+  <div class="sea"></div>
+  <div class="ferry"><div class="deck"></div><div class="funnel"></div><div class="hull"></div></div>
+  <div class="hero-card">
+    <div class="hero-eyebrow">FAMILY TRIP · 男鹿島リゾート 二日游</div>
+    <h1>男鹿島リゾートへ、<span class="accent">瀬戸内の島</span></h1>
+    <p class="deck">三个家庭、9 位大人带着 3 个小学生，从大阪/神户自驾到姫路港，坐船约 30 分登上家島群島的男鹿島。清澈白沙的海水浴、清晨跟渔师拉定置網、中村水産现捞的海鲜、开车环岛看采石场和野鹿——两天，让孩子在海岛上撒欢，让大人被海风充电。</p>
+    <div class="route-text">
+      <strong>大阪 / 神戸</strong>（自驾）→ <strong>姫路港</strong> → 男鹿島（乘船约30分）<br>
+      → 海水浴（立ノ浜/青井浜）→ <strong>中村水産 海鮮料理</strong> → 車で島一周<br>
+      → 男鹿島リゾート BBQ · 泊 → <strong>朝の漁業体験（定置網）</strong> → 釣り<br>
+      → 鹿公園 → 帰港（姫路）→ 帰阪
+    </div>
+    <div class="hero-dates">2026.07.21 月 — 07.22 火 · 1泊2日 · 12名（大人9・小学生3）</div>
+    <div class="music-player" id="music-player">
+      <button class="mp-btn" id="mp-btn" type="button" aria-label="背景音乐 播放/暂停"><span class="mp-icon-play">▶</span><span class="mp-icon-pause">❚❚</span></button>
+      <div class="mp-track" id="mp-track" role="slider" aria-label="音乐进度" tabindex="0"><div class="mp-fill" id="mp-fill"></div><div class="mp-thumb" id="mp-thumb"></div></div>
+      <span class="mp-time" id="mp-time">0:00 / 0:00</span>
+    </div>
+  </div>
+  <div class="hero-sign">
+    <img src="images/sign.jpg" alt="たんがしまリゾート 看板">
+    <span>たんがしまリゾート</span>
+  </div>
+</section>
+
+<main>
+
+<!-- ============ SPOTS ============ -->
+<section class="spots-section">
+  <div class="section-eyebrow">SIX EXPERIENCES · 六段体验</div>
+  <h2 class="section-title">这座岛的玩法 <span class="accent">— things to do on 男鹿島</span></h2>
+  <p class="section-sub">男鹿島是姫路外海家島群島里最安静的一座，人口只有二十几人。没有喧闹的景点，只有清澈的海、现捞的鱼、清晨的渔网和岛上的野鹿——正好适合三个家庭一起放空两天。</p>
+
+  <!-- 1: 海水浴 -->
+  <article class="spot-card featured">
+    <div class="spot-photo">
+      <img src="images/beach.jpg" alt="男鹿島 海水浴場でにぎわう浜" loading="lazy">
+      <div class="photo-tag">DAY 1 · 上午</div>
+      <div class="img-note">男鹿島 海水浴場</div>
+      <div class="spot-thumbs">
+        <img src="images/beach.jpg" alt="海水浴でにぎわう浜" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/beach3.jpg" alt="白砂の浜" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/seawater.jpg" alt="澄んだ海" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+      </div>
+    </div>
+    <div class="spot-body">
+      <div class="spot-no">01 · SEA BATHING</div>
+      <h3 class="spot-name">海水浴（立ノ浜 / 青井浜）<span class="accent-line"></span></h3>
+      <p class="spot-desc">男鹿島的海水浴场以 <strong>透明的海水和白沙</strong> 出名，夏天是家庭戏水的好去处。人少、水清、浪小，特别适合带小学生——大人可以躺在沙滩上，孩子在浅水里泡一上午。上岛第一件事就是换泳装下海，把城市的燥热甩在姫路。</p>
+      <div class="spot-meta">
+        <div><span>地点</span>男鹿島（たんがしま）· 立ノ浜 / 青井浜海水浴场</div>
+        <div><span>季节</span>夏季海开（7-8月）· 清澈白沙</div>
+        <div><span>提示</span><strong>孩子须穿救生衣 · 大人陪同</strong> · 备毛巾/凉鞋/防晒</div>
+        <div><span>确认</span>海水浴场开放/设施详情向男鹿島リゾート确认</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2: 中村水産 海鮮 -->
+  <article class="spot-card reverse featured">
+    <div class="spot-photo">
+      <img src="images/seafood.jpg" alt="海の家の海鮮 刺身盛り" loading="lazy">
+      <div class="photo-tag" style="color:#b23b3b">DAY 1 · 中午</div>
+      <div class="img-note">海の家の海鮮</div>
+      <div class="spot-thumbs">
+        <img src="images/seafood.jpg" alt="刺身盛り" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/umihouse.jpg" alt="海の家" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/beach4.jpg" alt="海の家近くの入り江" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+      </div>
+    </div>
+    <div class="spot-body">
+      <div class="spot-no">02 · NAKAMURA · SEAFOOD</div>
+      <h3 class="spot-name">中村水産 · 海鮮料理<span class="accent-line"></span></h3>
+      <p class="spot-desc">岛上海边的「中村荘（中村水産）」是 <strong>海の家</strong>，提供 <strong>现捞海鲜的刺身套餐</strong>，也能安排日归 BBQ。渔师早上打上来的鱼，中午就端上桌——这是离城市餐厅最远、离大海最近的一顿饭。孩子会第一次知道「今天吃的鱼几个小时前还在海里」。</p>
+      <div class="spot-meta">
+        <div><span>地点</span>男鹿島 · 海边「中村荘（中村水産）」</div>
+        <div><span>内容</span>新鲜刺身套餐 · 海鲜料理 · 日归 BBQ 可安排</div>
+        <div><span>提示</span><strong>12 人请提前预约</strong>（人数/菜单/时间）</div>
+        <div><span>确认</span>菜单·价格·预约向中村水産 / 男鹿島リゾート确认</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3: 漁業体験 定置網 -->
+  <article class="spot-card featured">
+    <div class="spot-photo">
+      <img src="images/miyaport.jpg" alt="家島 宮港・漁港（定置網漁の朝）" loading="lazy">
+      <div class="photo-tag">DAY 2 · 清晨</div>
+      <div class="img-note">家島の漁港</div>
+      <div class="spot-thumbs">
+        <img src="images/miyaport.jpg" alt="漁港" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/ferry.jpg" alt="連絡船" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/island-far.jpg" alt="海上から見る島" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+      </div>
+    </div>
+    <div class="spot-body">
+      <div class="spot-no">03 · FISHING EXPERIENCE</div>
+      <h3 class="spot-name">漁業体験 · 朝の定置網引揚<span class="accent-line"></span></h3>
+      <p class="spot-desc">本次行程 <strong>最特别的体验</strong>——清晨跟着渔师坐船出海，亲手拉起 <strong>定置網</strong>，看活蹦乱跳的鱼被一网网收上来。对孩子是终身难忘的一课，对大人是难得的清晨海上时光。岛上有「漁業体験民宿 青石荘」等可安排渔业体验。<strong>需早起（约5-6点集合）</strong>，前一晚早睡。</p>
+      <div class="spot-meta">
+        <div><span>地点</span>男鹿島 · 定置網渔场（青石荘 等安排）</div>
+        <div><span>时间</span><strong>清晨约 5:00-6:00 集合</strong>（随潮汐/渔况）</div>
+        <div><span>提示</span>穿防水/防滑鞋 · 孩子穿救生衣 · 备换洗衣</div>
+        <div><span>确认</span><strong>务必提前预约</strong>（人数/日期/集合时间）向主办确认</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4: 釣り -->
+  <article class="spot-card reverse">
+    <div class="spot-photo">
+      <img src="images/fishing.jpg" alt="男鹿島 磯釣り チャリコ真鯛" loading="lazy">
+      <div class="photo-tag" style="color:#356048">DAY 2 · 上午</div>
+      <div class="img-note">男鹿島 実釣</div>
+      <div class="spot-thumbs">
+        <img src="images/fishing.jpg" alt="チャリコ真鯛" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/nishijima.jpg" alt="磯・釣り場" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/beach2.jpg" alt="防波堤・港" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+      </div>
+    </div>
+    <div class="spot-body">
+      <div class="spot-no">04 · FISHING</div>
+      <h3 class="spot-name">釣り堀 · 海釣り<span class="accent-line"></span></h3>
+      <p class="spot-desc">渔业体验之后，来一场轻松的 <strong>亲子垂钓</strong>——防波堤海钓或钓鱼堀，孩子第一次钓上一条鱼的表情值得录下来。钓上来的鱼可以请中村水産帮忙料理，从「钓」到「吃」一条龙。人少浪小，很适合带小学生慢慢玩。</p>
+      <div class="spot-meta">
+        <div><span>地点</span>男鹿島 · 防波堤海钓 / 钓鱼堀（青石荘 等）</div>
+        <div><span>对象</span>亲子友好 · 大人陪同小学生</div>
+        <div><span>提示</span>钓具租借/饵料 · 钓获可请中村水産料理</div>
+        <div><span>确认</span>钓场/租具/费用向男鹿島リゾート确认</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5: 車で島一周 -->
+  <article class="spot-card featured">
+    <div class="spot-photo">
+      <img src="images/quarry.jpg" alt="男鹿島 採石場の断崖" loading="lazy">
+      <div class="photo-tag" style="color:#356048">DAY 1 · 下午</div>
+      <div class="img-note">男鹿島 採石場</div>
+      <div class="spot-thumbs">
+        <img src="images/quarry.jpg" alt="採石場の断崖" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/island-view.jpg" alt="海上から採石場" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/scenery1.jpg" alt="海辺の集落" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+      </div>
+    </div>
+    <div class="spot-body">
+      <div class="spot-no">05 · ISLAND DRIVE</div>
+      <h3 class="spot-name">車で島一周観光<span class="accent-line"></span></h3>
+      <p class="spot-desc">男鹿島 <strong>周长约 10km</strong>，开车环岛不用太久。岛以 <strong>采石场</strong> 闻名，坐船靠近时能看到裸露的褐色岩壁，很震撼；岛上还有 <strong>鹿公园</strong>——野生的鹿会出现在路边，孩子会兴奋地喊。安静的港口、集落、展望点，边开边停，慢慢逛。</p>
+      <div class="spot-meta">
+        <div><span>地点</span>男鹿島 一周（周长约10km）</div>
+        <div><span>看点</span>大迫力の採石場 · 鹿公園（野生鹿）· 静かな港</div>
+        <div><span>提示</span>岛上路窄 · 慢开 · 车能否随船上岛向リゾート确认</div>
+        <div><span>确认</span>环岛路线/是否有租车向男鹿島リゾート确认</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6: 男鹿島リゾート -->
+  <article class="spot-card reverse featured">
+    <div class="spot-photo">
+      <img src="images/sunset.jpg" alt="男鹿島 夕暮れの浜 盆踊り" loading="lazy">
+      <div class="photo-tag" style="color:#2f6070">DAY 1 · 傍晚</div>
+      <div class="img-note">男鹿島 夕暮れ</div>
+      <div class="spot-thumbs">
+        <img src="images/sunset.jpg" alt="夕暮れの提灯・盆踊り" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/sign.jpg" alt="リゾート看板" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/shrine.jpg" alt="海上の赤い橋・神社" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+      </div>
+    </div>
+    <div class="spot-body">
+      <div class="spot-no">06 · TANGASHIMA RESORT</div>
+      <h3 class="spot-name">男鹿島リゾート（住宿 · BBQ）<span class="accent-line"></span></h3>
+      <p class="spot-desc">本次行程的大本营——<strong>男鹿島リゾート</strong>，海边的住宿据点，傍晚在海风里 <strong>BBQ 烤海鲜</strong>，夜里没有光害、抬头就是满天星。三个家庭聚在一起，孩子跑跳、大人喝一杯，是这趟最松弛的时刻。<strong>12 人住宿务必提前确认预约</strong>（此前 7/19-20 曾被订满，7/21-22 请与主办/リゾート确认档期）。</p>
+      <div class="spot-meta">
+        <div><span>地点</span>男鹿島（たんがしま）· 男鹿島リゾート</div>
+        <div><span>内容</span>海边住宿 · BBQ · 星空 · 日归/连泊可</div>
+        <div><span>关键</span><strong>12名·1泊 提前确认预约</strong>（旺季·档期紧）</div>
+        <div><span>确认</span>房型/人数/餐食/接送船 向男鹿島リゾート · 会长确认</div>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<!-- ============ DAY 1 ============ -->
+<div class="day-panel">
+  <div class="day-header-row">
+    <div class="day-badge">DAY 1</div>
+    <div class="day-h">7月21日 · 月曜<small>KANSAI → 姫路港 → 男鹿島 · 海と海鮮</small></div>
+  </div>
+  <div class="timeline">
+    <div class="slot highlight">
+      <div class="time"><strong>08:00</strong><em>出发</em></div>
+      <div class="event">
+        <h3>大阪 / 神戸 → 姫路港（自驾）</h3>
+        <p>12 人分乘数辆车，从关西沿山阳道往姫路港，约 1–1.5 小时。三个家庭提前拉群约好集合点、到港时间。车能否随船上岛、要不要在姫路停车，<strong>提前向男鹿島リゾート确认</strong>（小岛车辆上岛有安排）。</p>
+        <small>阪神 → 姫路港 约1–1.5h · 车辆上岛方式先确认</small>
+      </div>
+    </div>
+    <div class="slot highlight">
+      <div class="time"><strong>09:30</strong><em>乘船</em></div>
+      <div class="event">
+        <h3>姫路港 → 男鹿島（乘船约30分）</h3>
+        <p>从姫路港坐船约 30 分钟上男鹿島。甲板上看濑户内海和采石场的褐色岩壁，孩子会兴奋。<strong>男鹿島船班/接送船请向リゾート或主办确认</strong>（小岛非频繁定期船，多为预约/度假村安排）。</p>
+        <small>姫路港〜男鹿島 约30分 · 船班·预约向主办/リゾート确认</small>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="time"><strong>10:30</strong><em>上岛</em></div>
+      <div class="event">
+        <h3>男鹿島リゾート 集合 · 寄存 · 换泳装</h3>
+        <p>上岛先到男鹿島リゾート集合、寄存行李、换泳装。跟主办确认两天的活动安排（渔业体验时间、BBQ、海鲜料理预约）。孩子已经等不及要下海了。</p>
+        <small>CHECK-IN / 寄存 / 活动确认</small>
+      </div>
+    </div>
+    <div class="slot highlight">
+      <div class="time"><strong>11:00</strong><em>海水浴</em></div>
+      <div class="event">
+        <h3>海水浴（立ノ浜 / 青井浜）</h3>
+        <p>上岛第一件事——下海！清澈白沙、浪小人少，孩子穿救生衣在浅水泡，大人躺沙滩。玩到中午饿了，正好去吃海鲜。<strong>孩子务必穿救生衣、大人全程陪同</strong>。</p>
+        <small>立ノ浜 / 青井浜 · 孩子救生衣必须 · 防晒</small>
+      </div>
+    </div>
+    <div class="slot highlight">
+      <div class="time"><strong>13:00</strong><em>午餐</em></div>
+      <div class="event">
+        <h3>中村水産 · 海鮮料理</h3>
+        <p>海边的中村荘（中村水産），现捞海鲜刺身套餐。渔师上午打的鱼，中午端上桌。<strong>12 人提前预约</strong>好人数和菜单。吃完稍作休息，下午环岛。</p>
+        <small>中村水産（中村荘）· 12名要予約</small>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="time"><strong>15:00</strong><em>环岛</em></div>
+      <div class="event">
+        <h3>車で島一周 · 鹿公園 · 采石场</h3>
+        <p>开车环岛（周长约10km），看采石场的岩壁、安静的港口和集落，去鹿公园找野生的鹿。边开边停，孩子沿路找鹿会很兴奋。傍晚回リゾート准备 BBQ。</p>
+        <small>島一周 · 鹿公園 · 採石場 · 静かな港</small>
+      </div>
+    </div>
+    <div class="slot highlight">
+      <div class="time"><strong>18:00</strong><em>BBQ · 泊</em></div>
+      <div class="event">
+        <h3>男鹿島リゾート · BBQ 夕食 · 星空</h3>
+        <p>海边 BBQ 烤海鲜，三个家庭围在一起，孩子跑跳、大人喝一杯。夜里没有光害，满天星星。今晚早点睡——明天清晨要跟渔师出海拉网。</p>
+        <small>BBQ · 星空 · 早睡（明晨5点渔业体验）</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DAY 2 ============ -->
+<div class="day-panel">
+  <div class="day-header-row">
+    <div class="day-badge">DAY 2</div>
+    <div class="day-h">7月22日 · 火曜<small>朝の漁業体験 → 釣り → 鹿公園 → 帰路</small></div>
+  </div>
+  <div class="timeline">
+    <div class="slot highlight">
+      <div class="time"><strong>05:30</strong><em>渔业体验</em></div>
+      <div class="event">
+        <h3>朝の漁業体験 · 定置網の引揚 ★</h3>
+        <p>本次<strong>最难忘的体验</strong>——清晨跟渔师坐船出海，亲手拉起定置網，看鱼一网网收上来。孩子会目瞪口呆，大人会记住这个海上的清晨。<strong>约 5:30 集合（随潮汐/渔况）</strong>，穿防滑鞋、孩子穿救生衣。提前一晚跟主办确认集合时间地点。</p>
+        <small>定置網引揚 · 约5:30集合 · 需提前预约 · 救生衣</small>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="time"><strong>08:00</strong><em>早餐</em></div>
+      <div class="event">
+        <h3>回リゾート · 早餐 · 休整</h3>
+        <p>体验完回来吃早餐，看看清晨自己拉上来的鱼。稍作休整，孩子可以补个觉，然后去钓鱼。</p>
+        <small>朝食 · 休整 · 看渔获</small>
+      </div>
+    </div>
+    <div class="slot highlight">
+      <div class="time"><strong>09:30</strong><em>钓鱼</em></div>
+      <div class="event">
+        <h3>釣り堀 · 海釣り（亲子垂钓）</h3>
+        <p>轻松的亲子垂钓，防波堤海钓或钓鱼堀。孩子钓上第一条鱼的表情一定要录下来。钓到的鱼可以请中村水産帮忙料理，中午加餐。</p>
+        <small>亲子垂钓 · 钓获可请中村水産料理</small>
+      </div>
+    </div>
+    <div class="slot">
+      <div class="time"><strong>11:30</strong><em>自由</em></div>
+      <div class="event">
+        <h3>鹿公园 / 海边 自由活动 · 午餐</h3>
+        <p>退房前的自由时间——再去鹿公园喂喂鹿、海边拾贝壳、买点岛上伴手礼。午餐吃剩下的海鲜或简餐，收拾行李准备返程。</p>
+        <small>鹿公園 · 海边 · 伴手礼 · 退房</small>
+      </div>
+    </div>
+    <div class="slot highlight">
+      <div class="time"><strong>13:30</strong><em>帰路</em></div>
+      <div class="event">
+        <h3>男鹿島 → 姫路港 → 帰阪</h3>
+        <p>坐船返姫路（约30分），甲板上跟濑户内海和男鹿島告别。到姫路取车，自驾回大阪/神户，约 1–1.5 小时。两天一夜——孩子晒黑了、玩累了，大人也被海岛和满天星星充满了电。</p>
+        <small>男鹿島〜姫路 约30分 · 姫路→阪神 约1–1.5h</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INFO ============ -->
+<div class="day-panel">
+  <div class="day-header-row">
+    <div class="day-badge">情報</div>
+    <div class="day-h">实用信息 / Essentials<small>BOAT · RESORT · ACTIVITIES · WEATHER</small></div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Boat · 乘船（上岛）</div>
+      <h4>姫路港 ⇄ 男鹿島</h4>
+      <div class="rows">
+        <div class="row"><span>时间</span>姫路港乘船 约<strong>30分</strong></div>
+        <div class="row"><span>方式</span>男鹿島非频繁定期船 · 多为<strong>预约/度假村接送</strong></div>
+        <div class="row"><span>确认</span>船班·车辆上岛 向主办/リゾート确认</div>
+        <div class="row"><span>家島</span>家島本島/坊勢有定期船 · 男鹿島另安排</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="label">Resort · 大本营</div>
+      <h4>男鹿島リゾート</h4>
+      <div class="rows">
+        <div class="row"><span>住宿</span>海边据点 · BBQ · 星空</div>
+        <div class="row"><span>关键</span><strong>7/21-22 · 12名 提前确认预约</strong></div>
+        <div class="row"><span>备注</span>7/19-20 曾满 · 本次日期请确认档期</div>
+        <div class="row"><span>对接</span>神戸山海会 于会长 / リゾート</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="label">Activities · 需预约</div>
+      <h4>活动一览</h4>
+      <div class="rows">
+        <div class="row"><span>①</span>海水浴（立ノ浜/青井浜）</div>
+        <div class="row"><span>②</span>釣り堀 · 海釣り</div>
+        <div class="row"><span>③</span><strong>漁業体験·定置網（清晨·要约）</strong></div>
+        <div class="row"><span>④</span>中村水産 海鮮料理（12名要约）</div>
+        <div class="row"><span>⑤</span>車で島一周 · 鹿公園</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="label">Weather · 7月天气</div>
+      <h4>盛夏 · 海岛</h4>
+      <div class="rows">
+        <div class="row"><span>气候</span>7月盛夏 晴热 28–33℃ · 紫外线强</div>
+        <div class="row"><span>必带</span><strong>泳装/救生衣/防晒/帽/水</strong></div>
+        <div class="row"><span>孩子</span>换洗衣 · 凉鞋 · 防滑鞋（渔业体验）</div>
+        <div class="row"><span>防中暑</span>海上/沙滩久晒注意 · 多补水</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ISLAND MAP ============ -->
+<div class="day-panel">
+  <div class="day-header-row">
+    <div class="day-badge">島全図</div>
+    <div class="day-h">男鹿島 岛屿导览 / Island Map<small>QUARRY · DEER PARK · BEACHES · SHRINE</small></div>
+  </div>
+  <div class="island-map">
+    <img src="images/tangasima.gif" alt="男鹿島（たんがしま）岛全图 地図">
+    <div class="map-legend">
+      <p>男鹿島（たんがしま）周长约 <strong>10km</strong>，开车环岛约 30–40 分钟。岛上没有红绿灯，只有海、渔港、采石场和野鹿。</p>
+      <ul>
+        <li>🦌 <strong>鹿公園</strong>（岛北）— 野生鹿出没，孩子最爱</li>
+        <li>🏖️ <strong>立ノ浜 / 青井の浜</strong> 海水浴场 — 清澈白沙</li>
+        <li>⛏️ <strong>採石場</strong>（多处）— 裸露褐色岩壁 · 大迫力</li>
+        <li>⛩️ <strong>大山神社 / 小学校跡</strong> — 岛上人文景点</li>
+      </ul>
+      <small>※ 岛屿导览示意图 · 具体路线/开放以现场与主办确认为准</small>
+    </div>
+  </div>
+</div>
+
+<!-- ============ RESORT MOVIE ============ -->
+<div class="day-panel">
+  <div class="day-header-row">
+    <div class="day-badge">実景</div>
+    <div class="day-h">男鹿島 実景ムービー / Beach Movie<small>立ノ浜・青井の浜 の海（実写）</small></div>
+  </div>
+  <div class="resort-movie">
+    <video src="images/resort.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="男鹿島の浜 実景動画"></video>
+  </div>
+</div>
+
+<!-- ============ CAUTIONS ============ -->
+<div class="day-panel cautions-panel">
+  <div class="day-header-row" style="border-bottom-color:rgba(47,159,184,0.25)">
+    <div class="day-badge">注意</div>
+    <div class="day-h">关键提醒 / Key Reminders<small>BEFORE YOU GO · DOUBLE CHECK THESE</small></div>
+  </div>
+  <div class="caution-list">
+    <div class="item">
+      <div class="ico">🏨</div>
+      <div class="text"><strong>男鹿島リゾート · 12 名住宿务必提前确认预约</strong>——此前 7/19-20 曾被订满、于会长在帮忙确认新日期。7/21-22 的房型、人数（含 3 小学生）、餐食、接送船，请与主办 / リゾート最终确认后再定行程。</div>
+    </div>
+    <div class="item">
+      <div class="ico">🐟</div>
+      <div class="text"><strong>漁業体験（定置網）需提前预约 · 清晨早起</strong>——约 5:30 集合、随潮汐渔况而定。要跟主办确认好日期、集合时间地点。前一晚早睡，穿防滑鞋，孩子穿救生衣。</div>
+    </div>
+    <div class="item">
+      <div class="ico">🦺</div>
+      <div class="text"><strong>孩子海边安全第一</strong>——海水浴、钓鱼、坐船，3 个小学生全程 <strong>穿救生衣、大人一对一陪同</strong>。清点人数按家分组，海上活动尤其注意。</div>
+    </div>
+    <div class="item">
+      <div class="ico">⛴</div>
+      <div class="text"><strong>船班与车辆上岛提前确认</strong>——男鹿島不是频繁定期船的岛，多为预约/度假村接送船。车能否随船上岛、末班船时间，务必先跟主办 / リゾート问清楚，别赶不上回程。</div>
+    </div>
+    <div class="item">
+      <div class="ico">🍤</div>
+      <div class="text"><strong>中村水産海鲜料理 · 12 人提前预约</strong>——人数多，菜单、时间、是否含 BBQ 提前订好。钓到/渔业体验的渔获能否加工，也一并问清。</div>
+    </div>
+    <div class="item">
+      <div class="ico">☀️</div>
+      <div class="text"><strong>盛夏防晒 + 防中暑</strong>——7 月晒热，海水浴、环岛、海上活动都暴晒。防晒霜、帽子、饮用水、孩子换洗衣必备；正午避免久晒，随时补水。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PACKING LIST ============ -->
+<div class="day-panel">
+  <div class="day-header-row">
+    <div class="day-badge">持ち物</div>
+    <div class="day-h">带什么去 / Packing List<small>FOOD · SUN &amp; BUGS · BEACH GEAR · ESSENTIALS</small></div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Food &amp; Drink · 食材 · 饮料</div>
+      <h4>🍙 吃喝</h4>
+      <div class="rows">
+        <div class="row"><span>孩子</span>零食/饼干/糖 · 果冻（船上车上安抚）</div>
+        <div class="row"><span>备餐</span>杯面/面包/方便食品（岛上店少）</div>
+        <div class="row"><span>水</span><strong>大量饮用水 · 运动饮料</strong>（防中暑）</div>
+        <div class="row"><span>大人</span>啤酒/饮料（BBQ 用 · 开车不喝）</div>
+        <div class="row"><span>保鲜</span>保冷袋 · 冰袋（夏天必备）</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="label">Sun &amp; Bugs · 防晒 · 防蚊</div>
+      <h4>☀️ 防晒 · 防蚊</h4>
+      <div class="rows">
+        <div class="row"><span>防晒</span><strong>SPF50+ 防晒霜</strong>（含儿童专用）</div>
+        <div class="row"><span>遮阳</span>帽子 · 太阳镜 · 防晒衣/长袖罩衫</div>
+        <div class="row"><span>防蚊</span><strong>驱蚊液 / 防蚊贴</strong>（海岛山林蚊多）</div>
+        <div class="row"><span>止痒</span>止痒膏 · 抗过敏药（被叮后）</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="label">Beach Gear · 海边装备</div>
+      <h4>🏖️ 海边 · 活动</h4>
+      <div class="rows">
+        <div class="row"><span>下海</span>泳衣 · <strong>儿童救生衣（必须）</strong> · 泳圈</div>
+        <div class="row"><span>擦拭</span>沙滩浴巾 · 凉鞋/沙滩鞋</div>
+        <div class="row"><span>防水</span>防水袋 · 手机防水套</div>
+        <div class="row"><span>渔业体验</span>防滑鞋 · 可弄湿旧衣 · 手套</div>
+        <div class="row"><span>换洗</span>换洗衣物（每人 1-2 套）</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="label">Essentials · 常备杂物</div>
+      <h4>🧰 常备 · 杂物</h4>
+      <div class="rows">
+        <div class="row"><span>药</span>常备药 · <strong>晕船药</strong> · 创可贴 · 肠胃药</div>
+        <div class="row"><span>清洁</span>湿巾 · 纸巾 · 垃圾袋</div>
+        <div class="row"><span>钱</span><strong>现金</strong>（小岛可能无法刷卡/无 ATM）</div>
+        <div class="row"><span>电</span>充电宝 · 数据线</div>
+        <div class="row"><span>孩子</span>玩具/绘本 · 换洗内衣</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FAMILY BAND ============ -->
+<div class="family-band">
+  <div class="caption">
+    <div class="caption-eyebrow">A SONG FROM TWO DAYS</div>
+    <div class="caption-text">三个家庭、十二个人，坐一班船到同一座岛<br><span style="color:var(--sea-deep)">——清晨的渔网、白沙的海、满天的星，都留在这两天里。</span></div>
+  </div>
+  <div class="silhouettes">
+    <div class="hill"></div>
+    <div class="person" style="left:12%; --c:#4f8f6a"><i></i></div>
+    <div class="person" style="left:20%; --c:#c47878"><i></i></div>
+    <div class="person kid" style="left:28%; --c:#e8c05a"><i></i></div>
+    <div class="person" style="left:38%; --c:#3f7f8f"><i></i></div>
+    <div class="person" style="left:46%; --c:#7a593f"><i></i></div>
+    <div class="person kid" style="left:54%; --c:#5ba0b0"><i></i></div>
+    <div class="person" style="left:64%; --c:#5b7c6d"><i></i></div>
+    <div class="person" style="left:72%; --c:#d85c72"><i></i></div>
+    <div class="person kid" style="left:80%; --c:#e8a05a"><i></i></div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-quote">两天、一座岛、三个家庭，带孩子清晨拉一次渔网，也让大人在满天星下把城市忘掉。</div>
+  <div>男鹿島リゾート · 瀬戸内 家島の島旅 · 2026年 7月21日–22日 · 从关西自驾+乘船</div>
+  <div class="footer-credit">
+    活动来自主办（神戸山海会）确认的 5 项：海水浴 · 钓鱼 · 定置網渔业体验 · 中村水産海鲜 · 环岛观光 — 岛/设施信息以主办 · 男鹿島リゾート确认为准<br>
+    BGM · 离别的车站 · 仅作个人家族旅行规划使用 · 本页为初版框架（体验图将换为真实照片）
+  </div>
+</footer>
+
+<audio id="bgm" src="bgm.m4a" loop preload="auto"></audio>
+<button id="music-toggle" class="music-toggle paused" type="button" aria-label="背景音乐" title="播放背景音乐"><span class="music-icon">♪</span></button>
+
+<script>
+(function() {
+  const audio = document.getElementById('bgm');
+  if (!audio) return;
+  const fab = document.getElementById('music-toggle');
+  const player = document.getElementById('music-player');
+  const playBtn = document.getElementById('mp-btn');
+  const trackEl = document.getElementById('mp-track');
+  const fillEl = document.getElementById('mp-fill');
+  const thumbEl = document.getElementById('mp-thumb');
+  const timeEl = document.getElementById('mp-time');
+  audio.volume = 0.38;
+  function fmt(t){ if(!isFinite(t)||t<0)t=0; const m=Math.floor(t/60), s=Math.floor(t%60); return m+':'+(s<10?'0':'')+s; }
+  function reflect(){
+    const playing = !audio.paused;
+    if (player) player.classList.toggle('playing', playing);
+    if (fab) { fab.classList.toggle('playing', playing); fab.classList.toggle('paused', !playing); fab.title = playing ? '暂停背景音乐' : '播放背景音乐'; }
+  }
+  function updateProgress(){
+    const dur = audio.duration || 0;
+    const pct = dur ? (audio.currentTime/dur)*100 : 0;
+    if (fillEl) fillEl.style.width = pct+'%';
+    if (thumbEl) thumbEl.style.left = pct+'%';
+    if (timeEl) timeEl.textContent = fmt(audio.currentTime)+' / '+fmt(dur);
+  }
+  audio.addEventListener('play', reflect);
+  audio.addEventListener('pause', reflect);
+  audio.addEventListener('timeupdate', updateProgress);
+  audio.addEventListener('loadedmetadata', updateProgress);
+  audio.addEventListener('durationchange', updateProgress);
+  function toggle(e){ if(e) e.stopPropagation(); if(audio.paused) audio.play().catch(function(){}); else audio.pause(); }
+  if (playBtn) playBtn.addEventListener('click', toggle);
+  if (fab) fab.addEventListener('click', toggle);
+  if (trackEl) {
+    let dragging = false;
+    function seek(e){
+      const rect = trackEl.getBoundingClientRect();
+      const x = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+      let ratio = (x - rect.left) / rect.width;
+      ratio = Math.max(0, Math.min(1, ratio));
+      if (audio.duration) audio.currentTime = ratio * audio.duration;
+      updateProgress();
+    }
+    trackEl.addEventListener('mousedown', function(e){dragging=true;seek(e);e.preventDefault()});
+    document.addEventListener('mousemove', function(e){if(dragging)seek(e)});
+    document.addEventListener('mouseup', function(){dragging=false});
+    trackEl.addEventListener('touchstart', seek, {passive:true});
+    trackEl.addEventListener('touchmove', seek, {passive:true});
+  }
+  const overlay = document.getElementById('enter-overlay');
+  if (overlay) {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    let entered = false;
+    function enterTrip(){
+      if (entered) return;
+      entered = true;
+      overlay.classList.add('hidden');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      audio.play().catch(function(){});
+      setTimeout(function(){ overlay.style.display='none'; }, 700);
+    }
+    overlay.addEventListener('click', enterTrip);
+    overlay.addEventListener('keydown', enterTrip);
+  }
+  const gestures = ['click','scroll','keydown','touchstart'];
+  function autoStart(){
+    gestures.forEach(function(ev){ document.removeEventListener(ev, autoStart); });
+    if (audio.paused) audio.play().catch(function(){});
+  }
+  gestures.forEach(function(ev){ document.addEventListener(ev, autoStart, {passive:true}); });
+  audio.play().catch(function(){});
+  reflect(); updateProgress();
+})();
+</script>
+</body>
+</html>
