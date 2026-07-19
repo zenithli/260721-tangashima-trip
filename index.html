@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>男鹿島リゾート · 瀬戸内 家島の島旅（7/21–7/22）</title>
-<meta name="description" content="12人（9大人+3小学生・3家庭）从关西自驾到姫路港、乘船约30分上男鹿島（たんがしま）：海水浴、钓鱼、定置網渔业体验、中村水産海鲜、环岛观光">
+<meta name="description" content="13人（10大人+3小学生・3家庭）从大阪/神户自驾到姫路港（车停港口），乘船约30分上男鹿島（たんがしま）：海水浴、潜水挖海螺、钓鱼、定置網渔业体验、现捞海鲜自炊、环岛看鹿、夜观星空（7/21-22）">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -169,9 +169,10 @@
   .info-card{background:linear-gradient(135deg, var(--cream) 0%, var(--paper) 100%); border:1px solid var(--line); border-radius:18px; padding:18px 20px;}
   .info-card .label{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--sea-deep); margin-bottom:8px;}
   .info-card h4{font-family:"Noto Serif SC",serif; font-size:16px; font-weight:600; margin-bottom:10px; color:var(--ink);}
-  .info-card .rows{display:grid; gap:5px; font-size:13px; color:var(--ink-soft)}
-  .info-card .rows .row{display:flex; gap:8px}
-  .info-card .rows .row span{color:var(--muted); min-width:60px; flex-shrink:0}
+  .info-card .rows{display:grid; grid-template-columns:minmax(0,1fr); gap:5px; font-size:13px; color:var(--ink-soft)}
+  /* block+悬挂缩进（同 .spot-meta 思路）：flex 会把行内 <strong>/<br>/文本节点各自变成 flex item 挤成竖条 */
+  .info-card .rows .row{display:block; min-width:0; padding-left:66px; text-indent:-66px; word-break:break-word}
+  .info-card .rows .row>span:first-child{display:inline-block; min-width:60px; margin-right:6px; color:var(--muted); text-indent:0; vertical-align:top}
   .info-card .rows strong{color:var(--ink);font-weight:600}
   .cautions-panel{background:linear-gradient(135deg, #eef9fb 0%, #dff1f4 100%); border:1px solid var(--line-warm); border-left:5px solid var(--sea);}
   .caution-list{display:grid; gap:11px; margin-top:6px}
@@ -209,7 +210,7 @@
   <div class="enter-card">
     <div class="enter-eyebrow">TANGASHIMA · IESHIMA ISLANDS · 2026</div>
     <div class="enter-name">男鹿島リゾート<br><span class="accent">瀬戸内 · 家島の島旅</span></div>
-    <div class="enter-sub">三个家庭、12 人（9 位大人 + 3 位小学生），从关西自驾到姫路港，乘船约 30 分登上濑户内海的男鹿島（たんがしま）——海水浴、海钓、清晨定置網渔业体验、中村水産的海鲜料理、开车环岛看鹿。</div>
+    <div class="enter-sub">13 人（10 位大人 + 3 个孩子），从大阪 / 神户自驾到姫路港（3 辆车停港口），换乘约 30 分登上濑户内海的男鹿島（たんがしま）——海水浴、海钓、潜水挖海螺、清晨定置網渔业体验、现捞海鲜自己下厨，开车环岛看鹿、夜里望星空。</div>
     <div class="enter-date">2026 . 7 . 21 月 ——— 7 . 22 火 · 1泊2日</div>
     <button class="enter-btn" id="enter-btn" type="button"><span class="enter-btn-ico">▶</span> 进入旅程</button>
     <div class="enter-hint">♪ 进入后背景音乐自动播放</div>
@@ -229,14 +230,14 @@
   <div class="hero-card">
     <div class="hero-eyebrow">FAMILY TRIP · 男鹿島リゾート 二日游</div>
     <h1>男鹿島リゾートへ、<span class="accent">瀬戸内の島</span></h1>
-    <p class="deck">三个家庭、9 位大人带着 3 个小学生，从大阪/神户自驾到姫路港，坐船约 30 分登上家島群島的男鹿島。清澈白沙的海水浴、清晨跟渔师拉定置網、中村水産现捞的海鲜、开车环岛看采石场和野鹿——两天，让孩子在海岛上撒欢，让大人被海风充电。</p>
+    <p class="deck">13 人（10 位大人 + 3 个孩子），从大阪 / 神户自驾到姫路港，<strong>船小、车不上岛</strong>，3 辆车停港口、人坐船约 30 分登上家島群島的男鹿島。清澈白沙的海水浴、潜水挖海螺、清晨跟渔师拉定置網、现捞海鲜自己下厨、开车环岛看采石场和野鹿——两天，让孩子在海岛上撒欢，让大人在满天星下被海风充电。</p>
     <div class="route-text">
-      <strong>大阪 / 神戸</strong>（自驾）→ <strong>姫路港</strong> → 男鹿島（乘船约30分）<br>
-      → 海水浴（立ノ浜/青井浜）→ <strong>中村水産 海鮮料理</strong> → 車で島一周<br>
-      → 男鹿島リゾート BBQ · 泊 → <strong>朝の漁業体験（定置網）</strong> → 釣り<br>
+      <strong>大阪 / 神戸</strong>（自驾 · 3 辆车停姫路港）→ <strong>姫路港</strong> → 男鹿島（乘船约30分）<br>
+      → 海水浴 · 潜水 · 挖海螺 → <strong>中村水産 海鮮料理</strong> → 車で島一周<br>
+      → <strong>现捞海鲜自炊</strong> · 泊 · 星空 → <strong>朝の漁業体験（定置網）</strong> → 釣り<br>
       → 鹿公園 → 帰港（姫路）→ 帰阪
     </div>
-    <div class="hero-dates">2026.07.21 月 — 07.22 火 · 1泊2日 · 12名（大人9・小学生3）</div>
+    <div class="hero-dates">2026.07.21 月 — 07.22 火 · 1泊2日 · 13名（大人10・子供3）</div>
     <div class="music-player" id="music-player">
       <button class="mp-btn" id="mp-btn" type="button" aria-label="背景音乐 播放/暂停"><span class="mp-icon-play">▶</span><span class="mp-icon-pause">❚❚</span></button>
       <div class="mp-track" id="mp-track" role="slider" aria-label="音乐进度" tabindex="0"><div class="mp-fill" id="mp-fill"></div><div class="mp-thumb" id="mp-thumb"></div></div>
@@ -272,11 +273,11 @@
     <div class="spot-body">
       <div class="spot-no">01 · SEA BATHING</div>
       <h3 class="spot-name">海水浴（立ノ浜 / 青井浜）<span class="accent-line"></span></h3>
-      <p class="spot-desc">男鹿島的海水浴场以 <strong>透明的海水和白沙</strong> 出名，夏天是家庭戏水的好去处。人少、水清、浪小，特别适合带小学生——大人可以躺在沙滩上，孩子在浅水里泡一上午。上岛第一件事就是换泳装下海，把城市的燥热甩在姫路。</p>
+      <p class="spot-desc">男鹿島的海水浴场以 <strong>透明的海水和白沙</strong> 出名，夏天是家庭戏水的好去处。人少、水清、浪小，特别适合带小学生。<strong>戴上蛙镜浮潜就能看到小鱼，退潮时还能在礁石边挖海螺、抓小螃蟹（磯遊び）</strong>——大人躺在沙滩上，孩子能玩一整天。上岛第一件事就是换泳装下海，把城市的燥热甩在姫路。</p>
       <div class="spot-meta">
         <div><span>地点</span>男鹿島（たんがしま）· 立ノ浜 / 青井浜海水浴场</div>
-        <div><span>季节</span>夏季海开（7-8月）· 清澈白沙</div>
-        <div><span>提示</span><strong>孩子须穿救生衣 · 大人陪同</strong> · 备毛巾/凉鞋/防晒</div>
+        <div><span>玩法</span>海水浴 · <strong>浮潜看鱼</strong> · 退潮<strong>挖海螺 · 磯遊び</strong></div>
+        <div><span>提示</span><strong>孩子须穿救生衣 · 大人陪同</strong> · 防晒是第一要务</div>
         <div><span>确认</span>海水浴场开放/设施详情向男鹿島リゾート确认</div>
       </div>
     </div>
@@ -285,23 +286,23 @@
   <!-- 2: 中村水産 海鮮 -->
   <article class="spot-card reverse featured">
     <div class="spot-photo">
-      <img src="images/seafood.jpg" alt="海の家の海鮮 刺身盛り" loading="lazy">
+      <img src="images/catch-sashimi.jpg" alt="佐藤老师发来 · 现捞真鲷/チャリコ刺身" loading="lazy">
       <div class="photo-tag" style="color:#b23b3b">DAY 1 · 中午</div>
-      <div class="img-note">海の家の海鮮</div>
+      <div class="img-note">佐藤老师发来的现捞刺身</div>
       <div class="spot-thumbs">
-        <img src="images/seafood.jpg" alt="刺身盛り" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/catch-sashimi.jpg" alt="现捞刺身" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
+        <img src="images/catch-fresh.jpg" alt="一桶现捞鲜鱼" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
         <img src="images/umihouse.jpg" alt="海の家" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
-        <img src="images/beach4.jpg" alt="海の家近くの入り江" onclick="this.closest('.spot-card').querySelector('.spot-photo > img').src=this.src">
       </div>
     </div>
     <div class="spot-body">
       <div class="spot-no">02 · NAKAMURA · SEAFOOD</div>
       <h3 class="spot-name">中村水産 · 海鮮料理<span class="accent-line"></span></h3>
-      <p class="spot-desc">岛上海边的「中村荘（中村水産）」是 <strong>海の家</strong>，提供 <strong>现捞海鲜的刺身套餐</strong>，也能安排日归 BBQ。渔师早上打上来的鱼，中午就端上桌——这是离城市餐厅最远、离大海最近的一顿饭。孩子会第一次知道「今天吃的鱼几个小时前还在海里」。</p>
+      <p class="spot-desc">岛上海边的「中村荘（中村水産）」是 <strong>海の家</strong>，提供 <strong>现捞海鲜的刺身套餐</strong>。<strong>岛上佐藤老师刚发来消息：竹筴魚（鯵）群到了，还有真鲷/チャリコ——「看来我们有鱼吃啦」</strong>（上图就是他发来的现捞刺身盘）。渔师早上打上来的鱼，中午就端上桌，这是离城市餐厅最远、离大海最近的一顿饭。孩子会第一次知道「今天吃的鱼几个小时前还在海里」。</p>
       <div class="spot-meta">
         <div><span>地点</span>男鹿島 · 海边「中村荘（中村水産）」</div>
-        <div><span>内容</span>新鲜刺身套餐 · 海鲜料理 · 日归 BBQ 可安排</div>
-        <div><span>提示</span><strong>12 人请提前预约</strong>（人数/菜单/时间）</div>
+        <div><span>内容</span>现捞刺身套餐 · 海鲜料理（真鲷 / 竹筴魚など）</div>
+        <div><span>提示</span><strong>13 人请提前预约</strong>（人数/菜单/时间）</div>
         <div><span>确认</span>菜单·价格·预约向中村水産 / 男鹿島リゾート确认</div>
       </div>
     </div>
@@ -396,12 +397,12 @@
     </div>
     <div class="spot-body">
       <div class="spot-no">06 · TANGASHIMA RESORT</div>
-      <h3 class="spot-name">男鹿島リゾート（住宿 · BBQ）<span class="accent-line"></span></h3>
-      <p class="spot-desc">本次行程的大本营——<strong>男鹿島リゾート</strong>，海边的住宿据点，傍晚在海风里 <strong>BBQ 烤海鲜</strong>，夜里没有光害、抬头就是满天星。三个家庭聚在一起，孩子跑跳、大人喝一杯，是这趟最松弛的时刻。<strong>12 人住宿务必提前确认预约</strong>（此前 7/19-20 曾被订满，7/21-22 请与主办/リゾート确认档期）。</p>
+      <h3 class="spot-name">男鹿島リゾート（住宿 · 自炊 · 星空）<span class="accent-line"></span></h3>
+      <p class="spot-desc">本次行程的大本营——<strong>男鹿島リゾート</strong>，海边的住宿据点。<strong>厨房可以用、有油盐酱醋等基本调料</strong>，晚上把现捞的鱼自己下厨，三个家庭围在一起吃，热闹又舒服。<strong>这次不搞 BBQ</strong>——烟熏火燎对人不友好、炭和调料还得另买另运麻烦（想搞可再研究）。夜里没有光害、抬头就是满天星。<strong>13 人住宿务必提前确认预约</strong>（此前 7/19-20 曾被订满，7/21-22 请与主办/リゾート确认档期）。</p>
       <div class="spot-meta">
         <div><span>地点</span>男鹿島（たんがしま）· 男鹿島リゾート</div>
-        <div><span>内容</span>海边住宿 · BBQ · 星空 · 日归/连泊可</div>
-        <div><span>关键</span><strong>12名·1泊 提前确认预约</strong>（旺季·档期紧）</div>
+        <div><span>内容</span>海边住宿 · <strong>厨房自炊（有油盐酱醋）</strong> · 星空</div>
+        <div><span>关键</span><strong>13名·1泊 提前确认预约</strong>（旺季·档期紧）</div>
         <div><span>确认</span>房型/人数/餐食/接送船 向男鹿島リゾート · 会长确认</div>
       </div>
     </div>
@@ -419,25 +420,25 @@
     <div class="slot highlight">
       <div class="time"><strong>08:00</strong><em>出发</em></div>
       <div class="event">
-        <h3>大阪 / 神戸 → 姫路港（自驾）</h3>
-        <p>12 人分乘数辆车，从关西沿山阳道往姫路港，约 1–1.5 小时。三个家庭提前拉群约好集合点、到港时间。车能否随船上岛、要不要在姫路停车，<strong>提前向男鹿島リゾート确认</strong>（小岛车辆上岛有安排）。</p>
-        <small>阪神 → 姫路港 约1–1.5h · 车辆上岛方式先确认</small>
+        <h3>大阪 / 神戸 → 姫路港（自驾 · 3 辆车）</h3>
+        <p>13 人分乘 <strong>3 辆车（大阪 2 · 神戸 1）</strong>，从关西沿山阳道往姫路港，约 1–1.5 小时。三个家庭提前拉群约好集合点、到港时间——<strong>神户那辆约 9:30 到姫路港</strong>，大阪两辆同样往这里集合。</p>
+        <small>阪神 → 姫路港 约1–1.5h · 神户车约9:30到港集合</small>
       </div>
     </div>
     <div class="slot highlight">
-      <div class="time"><strong>09:30</strong><em>乘船</em></div>
+      <div class="time"><strong>09:30</strong><em>停车 · 补货</em></div>
       <div class="event">
-        <h3>姫路港 → 男鹿島（乘船约30分）</h3>
-        <p>从姫路港坐船约 30 分钟上男鹿島。甲板上看濑户内海和采石场的褐色岩壁，孩子会兴奋。<strong>男鹿島船班/接送船请向リゾート或主办确认</strong>（小岛非频繁定期船，多为预约/度假村安排）。</p>
-        <small>姫路港〜男鹿島 约30分 · 船班·预约向主办/リゾート确认</small>
+        <h3>姫路港 · 集合 · 停车 · 采购</h3>
+        <p><strong>船小、车不上岛</strong>——3 辆车都停在姫路港的驻车场，人和行李坐船上岛。⚠️ <strong>岛上没有超市</strong>，两天的餐饮、蔬菜水果各家提前备好；上船前可在<strong>姫路港附近的 ラムー(LAMU) 超市</strong>把缺的补齐。（大阪那边会带一些吃的，酒和饮料各自带。）</p>
+        <small>车停姫路港驻车场（不上船）· ラムー超市补两天餐饮 · 岛上无超市</small>
       </div>
     </div>
-    <div class="slot">
-      <div class="time"><strong>10:30</strong><em>上岛</em></div>
+    <div class="slot highlight">
+      <div class="time"><strong>10:05</strong><em>乘船</em></div>
       <div class="event">
-        <h3>男鹿島リゾート 集合 · 寄存 · 换泳装</h3>
-        <p>上岛先到男鹿島リゾート集合、寄存行李、换泳装。跟主办确认两天的活动安排（渔业体验时间、BBQ、海鲜料理预约）。孩子已经等不及要下海了。</p>
-        <small>CHECK-IN / 寄存 / 活动确认</small>
+        <h3>姫路港 → 男鹿島（10:05 的船 · 约30分）</h3>
+        <p>坐 <strong>10 点 05 分</strong> 的船，约 30 分钟登上男鹿島。甲板上看濑户内海和采石场的褐色岩壁，孩子会兴奋。上岛先到男鹿島リゾート集合、寄存行李、换泳装，跟主办确认两天的活动安排。<strong>船班/接送船请向リゾート或主办确认</strong>（小岛非频繁定期船，多为预约/度假村安排）。</p>
+        <small>10:05 乘船约30分 · 上岛 CHECK-IN / 寄存 / 换泳装</small>
       </div>
     </div>
     <div class="slot highlight">
@@ -452,24 +453,24 @@
       <div class="time"><strong>13:00</strong><em>午餐</em></div>
       <div class="event">
         <h3>中村水産 · 海鮮料理</h3>
-        <p>海边的中村荘（中村水産），现捞海鲜刺身套餐。渔师上午打的鱼，中午端上桌。<strong>12 人提前预约</strong>好人数和菜单。吃完稍作休息，下午环岛。</p>
-        <small>中村水産（中村荘）· 12名要予約</small>
+        <p>海边的中村荘（中村水産），现捞海鲜刺身套餐。渔师上午打的鱼，中午端上桌（<strong>佐藤老师说鲹鱼群到了，有鱼吃啦</strong>）。<strong>13 人提前预约</strong>好人数和菜单。吃完稍作休息，下午环岛。</p>
+        <small>中村水産（中村荘）· 13名要予約</small>
       </div>
     </div>
     <div class="slot">
       <div class="time"><strong>15:00</strong><em>环岛</em></div>
       <div class="event">
         <h3>車で島一周 · 鹿公園 · 采石场</h3>
-        <p>开车环岛（周长约10km），看采石场的岩壁、安静的港口和集落，去鹿公园找野生的鹿。边开边停，孩子沿路找鹿会很兴奋。傍晚回リゾート准备 BBQ。</p>
+        <p>开车环岛（周长约10km），看采石场的岩壁、安静的港口和集落，去鹿公园找野生的鹿。边开边停，孩子沿路找鹿会很兴奋。傍晚回リゾート，准备晚餐（把白天的鱼自己下厨）。</p>
         <small>島一周 · 鹿公園 · 採石場 · 静かな港</small>
       </div>
     </div>
     <div class="slot highlight">
-      <div class="time"><strong>18:00</strong><em>BBQ · 泊</em></div>
+      <div class="time"><strong>18:00</strong><em>晚餐 · 泊</em></div>
       <div class="event">
-        <h3>男鹿島リゾート · BBQ 夕食 · 星空</h3>
-        <p>海边 BBQ 烤海鲜，三个家庭围在一起，孩子跑跳、大人喝一杯。夜里没有光害，满天星星。今晚早点睡——明天清晨要跟渔师出海拉网。</p>
-        <small>BBQ · 星空 · 早睡（明晨5点渔业体验）</small>
+        <h3>厨房自炊 · 现捞海鲜夕食 · 星空</h3>
+        <p><strong>用リゾート的厨房自己下厨</strong>（有油盐酱醋等基本调料），把白天现捞的鱼做成刺身/煮物/烤鱼，三个家庭围在一起吃。<strong>这次不搞 BBQ</strong>——烟熏火燎对人不友好、炭和调料还要另买另运（想搞可再研究）。夜里没有光害，满天星星。今晚早点睡——明天清晨要跟渔师出海拉网。</p>
+        <small>厨房自炊（有油盐酱醋）· 星空 · 早睡（明晨约5:30渔业体验）</small>
       </div>
     </div>
   </div>
@@ -536,18 +537,18 @@
       <div class="label">Boat · 乘船（上岛）</div>
       <h4>姫路港 ⇄ 男鹿島</h4>
       <div class="rows">
-        <div class="row"><span>时间</span>姫路港乘船 约<strong>30分</strong></div>
-        <div class="row"><span>方式</span>男鹿島非频繁定期船 · 多为<strong>预约/度假村接送</strong></div>
-        <div class="row"><span>确认</span>船班·车辆上岛 向主办/リゾート确认</div>
-        <div class="row"><span>家島</span>家島本島/坊勢有定期船 · 男鹿島另安排</div>
+        <div class="row"><span>去程</span><strong>10:05 的船</strong> · 约 <strong>30分</strong> 登岛</div>
+        <div class="row"><span>车</span><strong>船小·车不上岛</strong> → 3 辆车停姫路港驻车场</div>
+        <div class="row"><span>方式</span>非频繁定期船 · 多为<strong>预约/度假村接送</strong></div>
+        <div class="row"><span>确认</span>船班 / 末班时间 向主办 / リゾート确认</div>
       </div>
     </div>
     <div class="info-card">
       <div class="label">Resort · 大本营</div>
       <h4>男鹿島リゾート</h4>
       <div class="rows">
-        <div class="row"><span>住宿</span>海边据点 · BBQ · 星空</div>
-        <div class="row"><span>关键</span><strong>7/21-22 · 12名 提前确认预约</strong></div>
+        <div class="row"><span>住宿</span>海边据点 · <strong>厨房自炊（有油盐酱醋）</strong> · 星空</div>
+        <div class="row"><span>关键</span><strong>7/21-22 · 13名 提前确认预约</strong></div>
         <div class="row"><span>备注</span>7/19-20 曾满 · 本次日期请确认档期</div>
         <div class="row"><span>对接</span>神戸山海会 于会长 / リゾート</div>
       </div>
@@ -556,10 +557,10 @@
       <div class="label">Activities · 需预约</div>
       <h4>活动一览</h4>
       <div class="rows">
-        <div class="row"><span>①</span>海水浴（立ノ浜/青井浜）</div>
+        <div class="row"><span>①</span>海水浴 · <strong>浮潜 · 挖海螺（磯遊び）</strong></div>
         <div class="row"><span>②</span>釣り堀 · 海釣り</div>
         <div class="row"><span>③</span><strong>漁業体験·定置網（清晨·要约）</strong></div>
-        <div class="row"><span>④</span>中村水産 海鮮料理（12名要约）</div>
+        <div class="row"><span>④</span>中村水産 海鮮料理（13名要约）</div>
         <div class="row"><span>⑤</span>車で島一周 · 鹿公園</div>
       </div>
     </div>
@@ -616,8 +617,12 @@
   </div>
   <div class="caution-list">
     <div class="item">
+      <div class="ico">🌀</div>
+      <div class="text"><strong>如遇台风，顺延</strong>——海岛行程看天吃饭，7 月是台风季。若临近有台风影响船班或海况，<strong>本次行程顺延</strong>；出发前几天盯紧天气和船运通知，跟主办保持联系。</div>
+    </div>
+    <div class="item">
       <div class="ico">🏨</div>
-      <div class="text"><strong>男鹿島リゾート · 12 名住宿务必提前确认预约</strong>——此前 7/19-20 曾被订满、于会长在帮忙确认新日期。7/21-22 的房型、人数（含 3 小学生）、餐食、接送船，请与主办 / リゾート最终确认后再定行程。</div>
+      <div class="text"><strong>男鹿島リゾート · 13 名住宿务必提前确认预约</strong>——此前 7/19-20 曾被订满、于会长在帮忙确认新日期。7/21-22 的房型、人数（10 大人 + 3 个孩子）、餐食、接送船，请与主办 / リゾート最终确认后再定行程。</div>
     </div>
     <div class="item">
       <div class="ico">🐟</div>
@@ -629,15 +634,19 @@
     </div>
     <div class="item">
       <div class="ico">⛴</div>
-      <div class="text"><strong>船班与车辆上岛提前确认</strong>——男鹿島不是频繁定期船的岛，多为预约/度假村接送船。车能否随船上岛、末班船时间，务必先跟主办 / リゾート问清楚，别赶不上回程。</div>
+      <div class="text"><strong>船小·车不上岛 → 3 辆车停姫路港</strong>——船小、<strong>车上不了船</strong>，3 辆车都停姫路港的驻车场，人坐船上岛。去程坐 <strong>10:05 的船</strong>；<strong>末班 / 返程船时间</strong>务必先跟主办 / リゾート问清楚，别赶不上回程。</div>
+    </div>
+    <div class="item">
+      <div class="ico">🛒</div>
+      <div class="text"><strong>岛上没有超市 · 晚餐厨房自炊</strong>——两天的餐饮、蔬菜水果<strong>各家提前备好</strong>，上船前可在<strong>姫路港附近的 ラムー(LAMU) 超市</strong>补齐（大阪会带一些吃的，酒和饮料各自带）。リゾート<strong>厨房可用、有油盐酱醋</strong>，晚上自己做鱼；<strong>这次不搞 BBQ</strong>（烟熏火燎不友好、炭和调料另买另运麻烦，想搞可再研究）。</div>
     </div>
     <div class="item">
       <div class="ico">🍤</div>
-      <div class="text"><strong>中村水産海鲜料理 · 12 人提前预约</strong>——人数多，菜单、时间、是否含 BBQ 提前订好。钓到/渔业体验的渔获能否加工，也一并问清。</div>
+      <div class="text"><strong>中村水産海鲜料理 · 13 人提前预约</strong>——人数多，菜单、时间提前订好。钓到 / 渔业体验的渔获能否加工，也一并问清。</div>
     </div>
     <div class="item">
       <div class="ico">☀️</div>
-      <div class="text"><strong>盛夏防晒 + 防中暑</strong>——7 月晒热，海水浴、环岛、海上活动都暴晒。防晒霜、帽子、饮用水、孩子换洗衣必备；正午避免久晒，随时补水。</div>
+      <div class="text"><strong>防晒是第一要务 + 防中暑</strong>——7 月晒热，海水浴、环岛、海上都暴晒。防晒霜各自抹好、帽子墨镜饮用水必备；正午避免久晒、随时补水。<strong>夜里没有光害，留点体力看满天星空。</strong></div>
     </div>
   </div>
 </div>
@@ -653,11 +662,11 @@
       <div class="label">Food &amp; Drink · 食材 · 饮料</div>
       <h4>🍙 吃喝</h4>
       <div class="rows">
+        <div class="row"><span>正餐</span><strong>两天各自的食材 · 蔬菜水果</strong>（岛上无超市）</div>
         <div class="row"><span>孩子</span>零食/饼干/糖 · 果冻（船上车上安抚）</div>
-        <div class="row"><span>备餐</span>杯面/面包/方便食品（岛上店少）</div>
         <div class="row"><span>水</span><strong>大量饮用水 · 运动饮料</strong>（防中暑）</div>
-        <div class="row"><span>大人</span>啤酒/饮料（BBQ 用 · 开车不喝）</div>
-        <div class="row"><span>保鲜</span>保冷袋 · 冰袋（夏天必备）</div>
+        <div class="row"><span>大人</span>啤酒/饮料 <strong>各自带</strong>（开车不喝）</div>
+        <div class="row"><span>保鲜</span><strong>保冷剂/保冷袋 · 冰袋</strong>（夏天必备）</div>
       </div>
     </div>
     <div class="info-card">
@@ -674,22 +683,22 @@
       <div class="label">Beach Gear · 海边装备</div>
       <h4>🏖️ 海边 · 活动</h4>
       <div class="rows">
-        <div class="row"><span>下海</span>泳衣 · <strong>儿童救生衣（必须）</strong> · 泳圈</div>
-        <div class="row"><span>擦拭</span>沙滩浴巾 · 凉鞋/沙滩鞋</div>
+        <div class="row"><span>下海</span>泳衣 · <strong>儿童救生衣（必须）</strong> · 游泳圈</div>
+        <div class="row"><span>玩水</span>蛙镜/浮潜镜 · <strong>钓具/鱼具</strong> · 抄网（挖海螺）</div>
+        <div class="row"><span>擦拭</span>沙滩浴巾 · 凉鞋/沙滩鞋 · 墨镜</div>
         <div class="row"><span>防水</span>防水袋 · 手机防水套</div>
         <div class="row"><span>渔业体验</span>防滑鞋 · 可弄湿旧衣 · 手套</div>
-        <div class="row"><span>换洗</span>换洗衣物（每人 1-2 套）</div>
       </div>
     </div>
     <div class="info-card">
       <div class="label">Essentials · 常备杂物</div>
       <h4>🧰 常备 · 杂物</h4>
       <div class="rows">
+        <div class="row"><span>证件</span><strong>驾照 · 在留卡 · 医保卡</strong>（自驾 / 万一就医）</div>
+        <div class="row"><span>洗漱</span>牙刷 · 牙膏 · 毛巾 · 换洗衣物</div>
         <div class="row"><span>药</span>常备药 · <strong>晕船药</strong> · 创可贴 · 肠胃药</div>
-        <div class="row"><span>清洁</span>湿巾 · 纸巾 · 垃圾袋</div>
-        <div class="row"><span>钱</span><strong>现金</strong>（小岛可能无法刷卡/无 ATM）</div>
-        <div class="row"><span>电</span>充电宝 · 数据线</div>
-        <div class="row"><span>孩子</span>玩具/绘本 · 换洗内衣</div>
+        <div class="row"><span>钱电</span><strong>现金</strong>（岛上或无法刷卡/无 ATM）· 手机充电器</div>
+        <div class="row"><span>孩子</span>玩具/绘本 · 换洗内衣 · 湿巾/垃圾袋</div>
       </div>
     </div>
   </div>
@@ -699,7 +708,7 @@
 <div class="family-band">
   <div class="caption">
     <div class="caption-eyebrow">A SONG FROM TWO DAYS</div>
-    <div class="caption-text">三个家庭、十二个人，坐一班船到同一座岛<br><span style="color:var(--sea-deep)">——清晨的渔网、白沙的海、满天的星，都留在这两天里。</span></div>
+    <div class="caption-text">三个家庭、十三个人，坐一班船到同一座岛<br><span style="color:var(--sea-deep)">——清晨的渔网、白沙的海、满天的星，都留在这两天里。</span></div>
   </div>
   <div class="silhouettes">
     <div class="hill"></div>
@@ -721,8 +730,8 @@
   <div class="footer-quote">两天、一座岛、三个家庭，带孩子清晨拉一次渔网，也让大人在满天星下把城市忘掉。</div>
   <div>男鹿島リゾート · 瀬戸内 家島の島旅 · 2026年 7月21日–22日 · 从关西自驾+乘船</div>
   <div class="footer-credit">
-    活动来自主办（神戸山海会）确认的 5 项：海水浴 · 钓鱼 · 定置網渔业体验 · 中村水産海鲜 · 环岛观光 — 岛/设施信息以主办 · 男鹿島リゾート确认为准<br>
-    BGM · 离别的车站 · 仅作个人家族旅行规划使用 · 本页为初版框架（体验图将换为真实照片）
+    活动：海水浴 · 潜水 · 挖海螺 · 钓鱼 · 定置網渔业体验 · 中村水産海鲜 · 环岛观光 — 岛 / 设施 / 船班信息以主办（神戸山海会）· 男鹿島リゾート确认为准<br>
+    部分海鲜照片由岛上佐藤老师提供 · BGM · 离别的车站 · 仅作个人家族旅行规划使用
   </div>
 </footer>
 
