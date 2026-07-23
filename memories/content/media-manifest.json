@@ -1,0 +1,1149 @@
+{
+  "generatedAt": "2026-07-23",
+  "chapters": [
+    {
+      "key": "departure",
+      "title": "出发",
+      "en": "Departure"
+    },
+    {
+      "key": "arrival",
+      "title": "抵达",
+      "en": "Arrival"
+    },
+    {
+      "key": "gathering",
+      "title": "相聚",
+      "en": "Gathering"
+    },
+    {
+      "key": "village",
+      "title": "老街漫步",
+      "en": "The Old Village"
+    },
+    {
+      "key": "beach",
+      "title": "海边时光",
+      "en": "Afternoon by the Sea"
+    },
+    {
+      "key": "feast",
+      "title": "海鲜盛宴",
+      "en": "The Feast"
+    },
+    {
+      "key": "sunset",
+      "title": "日落垂钓",
+      "en": "Fishing at Sunset"
+    },
+    {
+      "key": "day2",
+      "title": "第二天，再出海",
+      "en": "Day Two, Back to Sea"
+    },
+    {
+      "key": "harvest",
+      "title": "满载而归",
+      "en": "A Full Catch"
+    },
+    {
+      "key": "closing",
+      "title": "回望",
+      "en": "Looking Back"
+    }
+  ],
+  "items": [
+    {
+      "order": 1,
+      "type": "photo",
+      "slug": "departure-drive",
+      "chapter": "departure",
+      "sourceFilename": "IMG_3060.JPG",
+      "capturedAt": "2026-07-21T09:25:50",
+      "sortTime": "2026-07-21T09:25:50",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": "wide",
+      "caption": "清晨出发，三辆车一路开向姫路港。",
+      "alt": "清晨出发，三辆车一路开向姫路港。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "departure-drive-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "departure-drive-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 2,
+      "type": "photo",
+      "slug": "departure-onboard",
+      "chapter": "departure",
+      "sourceFilename": "IMG_3062.JPG",
+      "capturedAt": "2026-07-21T11:14:14",
+      "sortTime": "2026-07-21T11:14:14",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "wide",
+      "caption": "船上，救生衣穿好，准备出海。",
+      "alt": "船上，救生衣穿好，准备出海。",
+      "originalDimensions": {
+        "width": 4032,
+        "height": 2510
+      },
+      "files": {
+        "full": {
+          "file": "departure-onboard-full.jpg",
+          "width": 1800,
+          "height": 1121
+        },
+        "grid": {
+          "file": "departure-onboard-grid.jpg",
+          "width": 900,
+          "height": 560
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 3,
+      "type": "photo",
+      "slug": "arrival-menu1",
+      "chapter": "arrival",
+      "sourceFilename": "IMG_3070.JPG",
+      "capturedAt": "2026-07-21T12:19:30",
+      "sortTime": "2026-07-21T12:19:30",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": null,
+      "alt": "抵达的照片",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "arrival-menu1-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "arrival-menu1-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 4,
+      "type": "photo",
+      "slug": "arrival-tempura",
+      "chapter": "arrival",
+      "sourceFilename": "IMG_3073.JPG",
+      "capturedAt": "2026-07-21T12:50:05",
+      "sortTime": "2026-07-21T12:50:05",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": "鲑鱼刺身配着白色的鱼干，很鲜。",
+      "alt": "鲑鱼刺身配着白色的鱼干，很鲜。",
+      "originalDimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "files": {
+        "full": {
+          "file": "arrival-tempura-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "arrival-tempura-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 5,
+      "type": "photo",
+      "slug": "arrival-sashimi1",
+      "chapter": "arrival",
+      "sourceFilename": "IMG_3074.JPG",
+      "capturedAt": "2026-07-21T12:50:27",
+      "sortTime": "2026-07-21T12:50:27",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": null,
+      "caption": "定食端上桌——天妇罗、生鱼片、白饭，样样都新鲜。",
+      "alt": "定食端上桌——天妇罗、生鱼片、白饭，样样都新鲜。",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "arrival-sashimi1-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "arrival-sashimi1-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 6,
+      "type": "photo",
+      "slug": "gathering-table",
+      "chapter": "gathering",
+      "sourceFilename": "IMG_3126.JPG",
+      "capturedAt": "2026-07-22T13:48:51",
+      "sortTime": "2026-07-22T13:48:51",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": "wide",
+      "caption": "一大桌人凑在一起吃饭，靠海的窗边最热闹。",
+      "alt": "一大桌人凑在一起吃饭，靠海的窗边最热闹。",
+      "originalDimensions": {
+        "width": 4032,
+        "height": 2540
+      },
+      "files": {
+        "full": {
+          "file": "gathering-table-full.jpg",
+          "width": 1800,
+          "height": 1134
+        },
+        "grid": {
+          "file": "gathering-table-grid.jpg",
+          "width": 900,
+          "height": 567
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 7,
+      "type": "photo",
+      "slug": "gathering-family1",
+      "chapter": "gathering",
+      "sourceFilename": "IMG_3134.JPG",
+      "capturedAt": "2026-07-22T14:38:22",
+      "sortTime": "2026-07-22T14:38:22",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": "一家人整整齐齐。",
+      "alt": "一家人整整齐齐。",
+      "originalDimensions": {
+        "width": 4032,
+        "height": 2540
+      },
+      "files": {
+        "full": {
+          "file": "gathering-family1-full.jpg",
+          "width": 1800,
+          "height": 1134
+        },
+        "grid": {
+          "file": "gathering-family1-grid.jpg",
+          "width": 900,
+          "height": 567
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 8,
+      "type": "photo",
+      "slug": "gathering-family2",
+      "chapter": "gathering",
+      "sourceFilename": "IMG_3137.JPG",
+      "capturedAt": "2026-07-22T14:38:43",
+      "sortTime": "2026-07-22T14:38:43",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": null,
+      "alt": "相聚的照片",
+      "originalDimensions": {
+        "width": 4032,
+        "height": 2540
+      },
+      "files": {
+        "full": {
+          "file": "gathering-family2-full.jpg",
+          "width": 1800,
+          "height": 1134
+        },
+        "grid": {
+          "file": "gathering-family2-grid.jpg",
+          "width": 900,
+          "height": 567
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 9,
+      "type": "photo",
+      "slug": "village-alley1",
+      "chapter": "village",
+      "sourceFilename": "IMG_3087.JPG",
+      "capturedAt": "2026-07-21T13:25:52",
+      "sortTime": "2026-07-21T13:25:52",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "portrait",
+      "caption": "岛上的老街，安静得只剩脚步声。",
+      "alt": "岛上的老街，安静得只剩脚步声。",
+      "originalDimensions": {
+        "width": 3024,
+        "height": 3387
+      },
+      "files": {
+        "full": {
+          "file": "village-alley1-full.jpg",
+          "width": 1607,
+          "height": 1800
+        },
+        "grid": {
+          "file": "village-alley1-grid.jpg",
+          "width": 804,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 10,
+      "type": "photo",
+      "slug": "village-corner",
+      "chapter": "village",
+      "sourceFilename": "IMG_3092.JPG",
+      "capturedAt": "2026-07-21T13:37:55",
+      "sortTime": "2026-07-21T13:37:55",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": null,
+      "alt": "老街漫步的照片",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "village-corner-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "village-corner-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 11,
+      "type": "photo",
+      "slug": "village-stairs-view",
+      "chapter": "village",
+      "sourceFilename": "IMG_3097.JPG",
+      "capturedAt": "2026-07-21T13:39:36",
+      "sortTime": "2026-07-21T13:39:36",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": "portrait",
+      "caption": "沿着石阶慢慢往上走。",
+      "alt": "沿着石阶慢慢往上走。",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "village-stairs-view-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "village-stairs-view-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 12,
+      "type": "photo",
+      "slug": "village-canal",
+      "chapter": "village",
+      "sourceFilename": "IMG_3094.JPG",
+      "capturedAt": "2026-07-21T13:39:27",
+      "sortTime": "2026-07-21T13:39:27",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "wide",
+      "caption": "沿着水道慢慢走。",
+      "alt": "沿着水道慢慢走。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "village-canal-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "village-canal-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 13,
+      "type": "photo",
+      "slug": "village-window",
+      "chapter": "village",
+      "sourceFilename": "图片_20260721143231_116_5537.jpg",
+      "capturedAt": "2026-07-21T14:32:31",
+      "sortTime": "2026-07-21T14:32:31",
+      "timeSource": "filename_wechat",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "portrait",
+      "caption": "路边人家窗台上的小摆设。",
+      "alt": "路边人家窗台上的小摆设。",
+      "originalDimensions": {
+        "width": 1707,
+        "height": 1280
+      },
+      "files": {
+        "full": {
+          "file": "village-window-full.jpg",
+          "width": 1707,
+          "height": 1280
+        },
+        "grid": {
+          "file": "village-window-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": false
+    },
+    {
+      "order": 14,
+      "type": "photo",
+      "slug": "beach-tent",
+      "chapter": "beach",
+      "sourceFilename": "IMG_3104.JPG",
+      "capturedAt": "2026-07-21T16:51:55",
+      "sortTime": "2026-07-21T16:51:55",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": "wide",
+      "caption": "沙滩上支起帐篷，海水浴的下午开始了。",
+      "alt": "沙滩上支起帐篷，海水浴的下午开始了。",
+      "originalDimensions": {
+        "width": 4032,
+        "height": 3024
+      },
+      "files": {
+        "full": {
+          "file": "beach-tent-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "beach-tent-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 15,
+      "type": "photo",
+      "slug": "beach-swim-wide",
+      "chapter": "beach",
+      "sourceFilename": "IMG_3103.JPG",
+      "capturedAt": "2026-07-21T16:34:37",
+      "sortTime": "2026-07-21T16:34:37",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "wide",
+      "caption": "孩子们在浅水区玩得起劲。",
+      "alt": "孩子们在浅水区玩得起劲。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "beach-swim-wide-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "beach-swim-wide-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 16,
+      "type": "photo",
+      "slug": "feast-sashimi-bowl",
+      "chapter": "feast",
+      "sourceFilename": "IMG_3075.JPG",
+      "capturedAt": "2026-07-21T12:51:43",
+      "sortTime": "2026-07-21T12:51:43",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": null,
+      "caption": "自己捞的鱼，做成一碗满满的海鲜盖饭。",
+      "alt": "自己捞的鱼，做成一碗满满的海鲜盖饭。",
+      "originalDimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "files": {
+        "full": {
+          "file": "feast-sashimi-bowl-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "feast-sashimi-bowl-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 17,
+      "type": "photo",
+      "slug": "feast-sashimi2",
+      "chapter": "feast",
+      "sourceFilename": "IMG_3118.JPG",
+      "capturedAt": "2026-07-22T12:49:36",
+      "sortTime": "2026-07-22T12:49:36",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": null,
+      "caption": "整鱼摆盘的生鱼片，鲜得发亮。",
+      "alt": "整鱼摆盘的生鱼片，鲜得发亮。",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "feast-sashimi2-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "feast-sashimi2-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 18,
+      "type": "photo",
+      "slug": "feast-tempura2",
+      "chapter": "feast",
+      "sourceFilename": "IMG_3119.JPG",
+      "capturedAt": "2026-07-22T12:49:39",
+      "sortTime": "2026-07-22T12:49:39",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": null,
+      "alt": "海鲜盛宴的照片",
+      "originalDimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "files": {
+        "full": {
+          "file": "feast-tempura2-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "feast-tempura2-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 19,
+      "type": "photo",
+      "slug": "sunset-catch-board",
+      "chapter": "sunset",
+      "sourceFilename": "图片_20260721235746_125_5537.jpg",
+      "capturedAt": "2026-07-21T23:57:46",
+      "sortTime": "2026-07-21T23:57:46",
+      "timeSource": "filename_wechat",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": "今晚的战果，写在木板上。",
+      "alt": "今晚的战果，写在木板上。",
+      "originalDimensions": {
+        "width": 1280,
+        "height": 1707
+      },
+      "files": {
+        "full": {
+          "file": "sunset-catch-board-full.jpg",
+          "width": 1280,
+          "height": 1707
+        },
+        "grid": {
+          "file": "sunset-catch-board-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": false
+    },
+    {
+      "order": 20,
+      "type": "photo",
+      "slug": "beach-wetsuit",
+      "chapter": "day2",
+      "sourceFilename": "图片_20260722111049_141_5537.jpg",
+      "capturedAt": "2026-07-22T11:10:49",
+      "sortTime": "2026-07-22T11:10:49",
+      "timeSource": "filename_wechat",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": "第二天一早，潜水装备穿好，准备下海看看。",
+      "alt": "第二天一早，潜水装备穿好，准备下海看看。",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "beach-wetsuit-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "beach-wetsuit-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 21,
+      "type": "photo",
+      "slug": "day2-boat-departure",
+      "chapter": "day2",
+      "sourceFilename": "IMG_3113.JPG",
+      "capturedAt": "2026-07-22T09:11:01",
+      "sortTime": "2026-07-22T09:11:01",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "wide",
+      "caption": "再次登船出海。",
+      "alt": "再次登船出海。",
+      "originalDimensions": {
+        "width": 4284,
+        "height": 5712
+      },
+      "files": {
+        "full": {
+          "file": "day2-boat-departure-full.jpg",
+          "width": 1350,
+          "height": 1800
+        },
+        "grid": {
+          "file": "day2-boat-departure-grid.jpg",
+          "width": 675,
+          "height": 900
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 22,
+      "type": "photo",
+      "slug": "day2-swim-tube",
+      "chapter": "day2",
+      "sourceFilename": "IMG_3116.JPG",
+      "capturedAt": "2026-07-22T09:35:00",
+      "sortTime": "2026-07-22T09:35:00",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "wide",
+      "caption": "又下水了。",
+      "alt": "又下水了。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "day2-swim-tube-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "day2-swim-tube-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 23,
+      "type": "photo",
+      "slug": "day2-noodle-lunch",
+      "chapter": "day2",
+      "sourceFilename": "图片_20260722110610_132_5537.jpg",
+      "capturedAt": "2026-07-22T11:06:10",
+      "sortTime": "2026-07-22T11:06:10",
+      "timeSource": "filename_wechat",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": null,
+      "caption": "码头边的一碗面，简单又满足。",
+      "alt": "码头边的一碗面，简单又满足。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "day2-noodle-lunch-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "day2-noodle-lunch-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 24,
+      "type": "photo",
+      "slug": "harvest-kid-catch",
+      "chapter": "harvest",
+      "sourceFilename": "图片_20260722154038_186_5537.jpg",
+      "capturedAt": "2026-07-22T15:40:38",
+      "sortTime": "2026-07-22T15:40:38",
+      "timeSource": "filename_wechat",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": "portrait",
+      "caption": "小朋友第一次在堤岸边认真钓鱼。",
+      "alt": "小朋友第一次在堤岸边认真钓鱼。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "harvest-kid-catch-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "harvest-kid-catch-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 25,
+      "type": "photo",
+      "slug": "harvest-boat-group",
+      "chapter": "harvest",
+      "sourceFilename": "图片_20260722161741_200_5537.jpg",
+      "capturedAt": "2026-07-22T16:17:41",
+      "sortTime": "2026-07-22T16:17:41",
+      "timeSource": "filename_wechat",
+      "isEstimated": false,
+      "featured": false,
+      "cropHint": "wide",
+      "caption": "一家人挤在船头，橙色救生衣格外显眼。",
+      "alt": "一家人挤在船头，橙色救生衣格外显眼。",
+      "originalDimensions": {
+        "width": 5712,
+        "height": 4284
+      },
+      "files": {
+        "full": {
+          "file": "harvest-boat-group-full.jpg",
+          "width": 1800,
+          "height": 1350
+        },
+        "grid": {
+          "file": "harvest-boat-group-grid.jpg",
+          "width": 900,
+          "height": 675
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 26,
+      "type": "photo",
+      "slug": "closing-beach-eve",
+      "chapter": "closing",
+      "sourceFilename": "IMG_3106.JPG",
+      "capturedAt": "2026-07-21T17:41:04",
+      "sortTime": "2026-07-21T17:41:04",
+      "timeSource": "exif_datetimeoriginal",
+      "isEstimated": false,
+      "featured": true,
+      "cropHint": "wide",
+      "caption": "海岛的黄昏，安静得像一幅画。",
+      "alt": "海岛的黄昏，安静得像一幅画。",
+      "originalDimensions": {
+        "width": 4032,
+        "height": 2570
+      },
+      "files": {
+        "full": {
+          "file": "closing-beach-eve-full.jpg",
+          "width": 1800,
+          "height": 1147
+        },
+        "grid": {
+          "file": "closing-beach-eve-grid.jpg",
+          "width": 900,
+          "height": 574
+        }
+      },
+      "cropped": true
+    },
+    {
+      "order": 27,
+      "type": "video",
+      "slug": "video-boat-wake",
+      "chapter": "departure",
+      "sourceFilename": "IMG_3068.MOV",
+      "capturedAt": "2026-07-21T11:50:51",
+      "sortTime": "2026-07-21T11:50:51",
+      "timeSource": "video_keys_creationdate",
+      "isEstimated": false,
+      "featured": false,
+      "caption": "船开动，白色的浪花在身后展开。",
+      "alt": "船开动，白色的浪花在身后展开。",
+      "trim": {
+        "start": 1,
+        "end": 8
+      },
+      "files": {
+        "file": "video-boat-wake.mp4",
+        "poster": "video-boat-wake-poster.jpg",
+        "width": 1080,
+        "height": 608,
+        "duration_sec": 7.0,
+        "muted": true
+      }
+    },
+    {
+      "order": 28,
+      "type": "video",
+      "slug": "video-clear-water",
+      "chapter": "arrival",
+      "sourceFilename": "5B03D70F57D7CB089B16C8EBC72FD22BB35EBDB4.mp4",
+      "capturedAt": "2026-07-14T11:50:21",
+      "sortTime": "2026-07-14T11:50:21",
+      "timeSource": "video_createdate_utc+9_heuristic",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "渡海途中，海水清得能看见水下的鱼。",
+      "alt": "渡海途中，海水清得能看见水下的鱼。",
+      "trim": {
+        "start": 2,
+        "end": 9
+      },
+      "files": {
+        "file": "video-clear-water.mp4",
+        "poster": "video-clear-water-poster.jpg",
+        "width": 1080,
+        "height": 608,
+        "duration_sec": 7.0,
+        "muted": true
+      }
+    },
+    {
+      "order": 29,
+      "type": "video",
+      "slug": "video-harbor-dock",
+      "chapter": "arrival",
+      "sourceFilename": "da560654ca8fd66ff3734e25988f748c.mp4",
+      "capturedAt": "2026-07-21T12:17:42",
+      "sortTime": "2026-07-21T12:17:42",
+      "timeSource": "video_userdata_datetimeoriginal",
+      "isEstimated": false,
+      "featured": false,
+      "caption": "抵达岛上的小码头。",
+      "alt": "抵达岛上的小码头。",
+      "trim": {
+        "start": 0,
+        "end": 5
+      },
+      "files": {
+        "file": "video-harbor-dock.mp4",
+        "poster": "video-harbor-dock-poster.jpg",
+        "width": 320,
+        "height": 568,
+        "duration_sec": 5.0,
+        "muted": true
+      }
+    },
+    {
+      "order": 30,
+      "type": "video",
+      "slug": "video-day2-boat",
+      "chapter": "day2",
+      "sourceFilename": "IMG_3115.MOV",
+      "capturedAt": "2026-07-22T09:11:04",
+      "sortTime": "2026-07-22T09:11:04",
+      "timeSource": "video_keys_creationdate",
+      "isEstimated": false,
+      "featured": false,
+      "caption": "第二天一早，再次出海。",
+      "alt": "第二天一早，再次出海。",
+      "trim": {
+        "start": 2,
+        "end": 10
+      },
+      "files": {
+        "file": "video-day2-boat.mp4",
+        "poster": "video-day2-boat-poster.jpg",
+        "width": 1080,
+        "height": 1920,
+        "duration_sec": 8.0,
+        "muted": true
+      }
+    },
+    {
+      "order": 31,
+      "type": "video",
+      "slug": "video-diver-prep",
+      "chapter": "day2",
+      "sourceFilename": "a3b6ad7a588ed23cbb602a501622b428.mp4",
+      "capturedAt": "2026-07-22T14:03:22",
+      "sortTime": "2026-07-22T14:03:22",
+      "timeSource": "video_createdate_utc+9_heuristic",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "潜水装备穿戴整齐，走向海边。",
+      "alt": "潜水装备穿戴整齐，走向海边。",
+      "trim": {
+        "start": 0,
+        "end": 4
+      },
+      "files": {
+        "file": "video-diver-prep.mp4",
+        "poster": "video-diver-prep-poster.jpg",
+        "width": 720,
+        "height": 1280,
+        "duration_sec": 4.0,
+        "muted": true
+      }
+    },
+    {
+      "order": 32,
+      "type": "video",
+      "slug": "video-kids-fishing-pier",
+      "chapter": "harvest",
+      "sourceFilename": "bba0809db49d1fa890d1670143213047.mp4",
+      "capturedAt": "2026-07-22T16:46:20",
+      "sortTime": "2026-07-22T16:46:20",
+      "timeSource": "video_createdate_utc+9_heuristic",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "太阳快落山时，孩子的鱼竿突然弯成一张弓——上钩了！",
+      "alt": "太阳快落山时，孩子的鱼竿突然弯成一张弓——上钩了！",
+      "trim": {
+        "start": 32,
+        "end": 43
+      },
+      "files": {
+        "file": "video-kids-fishing-pier.mp4",
+        "poster": "video-kids-fishing-pier-poster.jpg",
+        "width": 720,
+        "height": 1280,
+        "duration_sec": 11.0,
+        "muted": false
+      }
+    },
+    {
+      "order": 33,
+      "type": "video",
+      "slug": "video-net-sorting",
+      "chapter": "harvest",
+      "sourceFilename": "9e759eb5a1ec9fc61d756999785bd6ea.mp4",
+      "capturedAt": "2026-07-22T16:47:42",
+      "sortTime": "2026-07-22T16:47:42",
+      "timeSource": "video_createdate_utc+9_heuristic",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "满满一网渔获，分拣进桶里。",
+      "alt": "满满一网渔获，分拣进桶里。",
+      "trim": {
+        "start": 2,
+        "end": 11
+      },
+      "files": {
+        "file": "video-net-sorting.mp4",
+        "poster": "video-net-sorting-poster.jpg",
+        "width": 544,
+        "height": 960,
+        "duration_sec": 9.0,
+        "muted": false
+      }
+    },
+    {
+      "order": 34,
+      "type": "video",
+      "slug": "video-woman-wave",
+      "chapter": "harvest",
+      "sourceFilename": "dd93af3c1705c62f05c24db9bdb98f67.mp4",
+      "capturedAt": "2026-07-22T16:49:43",
+      "sortTime": "2026-07-22T16:49:43",
+      "timeSource": "video_createdate_utc+9_heuristic",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "船上，妈妈笑着挥手。",
+      "alt": "船上，妈妈笑着挥手。",
+      "trim": {
+        "start": 0,
+        "end": 7
+      },
+      "files": {
+        "file": "video-woman-wave.mp4",
+        "poster": "video-woman-wave-poster.jpg",
+        "width": 720,
+        "height": 1280,
+        "duration_sec": 7.0,
+        "muted": false
+      }
+    },
+    {
+      "order": 35,
+      "type": "video",
+      "slug": "video-family-boat-return",
+      "chapter": "harvest",
+      "sourceFilename": "404456f9904c244e6b857e70cfa73da9.mp4",
+      "capturedAt": "2026-07-22T16:50:05",
+      "sortTime": "2026-07-22T16:50:05",
+      "timeSource": "video_createdate_utc+9_heuristic",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "满载而归，一家人挤在船头。",
+      "alt": "满载而归，一家人挤在船头。",
+      "trim": {
+        "start": 1,
+        "end": 7
+      },
+      "files": {
+        "file": "video-family-boat-return.mp4",
+        "poster": "video-family-boat-return-poster.jpg",
+        "width": 1080,
+        "height": 608,
+        "duration_sec": 6.0,
+        "muted": false
+      }
+    },
+    {
+      "order": 36,
+      "type": "video",
+      "slug": "video-palm-beach",
+      "chapter": "closing",
+      "sourceFilename": "60fef303a1c4c507a91d85d09759b584.mp4",
+      "capturedAt": "2026-07-23T09:00:59",
+      "sortTime": "2026-07-23T09:00:59",
+      "timeSource": "file_modify_time",
+      "isEstimated": true,
+      "featured": false,
+      "caption": "离开前，最后看一眼这片海滩。",
+      "alt": "离开前，最后看一眼这片海滩。",
+      "trim": {
+        "start": 0,
+        "end": 6
+      },
+      "files": {
+        "file": "video-palm-beach.mp4",
+        "poster": "video-palm-beach-poster.jpg",
+        "width": 540,
+        "height": 960,
+        "duration_sec": 6.0,
+        "muted": true
+      }
+    }
+  ]
+}

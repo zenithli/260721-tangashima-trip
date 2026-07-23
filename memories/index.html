@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>男鹿岛，两天一夜 · Angela 一家的夏日回忆</title>
+<meta name="description" content="2026年7月21-22日，男鹿岛两天一夜——出发、渡海、渔村漫步、日落垂钓、满载而归。一段被认真收好的夏天。">
+<script>
+(function(){
+  try{
+    var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    document.documentElement.setAttribute('data-motion', mq.matches ? 'reduce' : 'auto');
+    mq.addEventListener && mq.addEventListener('change', function(e){
+      document.documentElement.setAttribute('data-motion', e.matches ? 'reduce' : 'auto');
+    });
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF6EC; --paper-deep:#F1E8D6; --paper-dark:#E9DDC4;
+  --ink:#2B2419; --ink-soft:#6C6152; --ink-faint:#A69C89;
+  --line:#E2D6BC; --line-soft:#EEE5D2;
+  --accent:#A9713F; --accent-deep:#7C5030; --accent-soft:#C99A66;
+  --shadow: 0 34px 76px rgba(43,36,25,.18);
+  --shadow-sm: 0 12px 30px rgba(43,36,25,.12);
+  --radius: 6px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root[data-motion="reduce"] html{scroll-behavior:auto}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Yu Gothic","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img,video{max-width:100%; display:block}
+a{color:inherit}
+.serif{font-family:"Noto Serif SC",serif}
+.ital{font-family:"Cormorant Garamond",serif; font-style:italic}
+.mono{font-family:"JetBrains Mono",monospace}
+
+/* ---------- bgm scene sentinels (invisible markers for scroll-driven track switch) ---------- */
+.bgm-sentinel{display:block; width:1px; height:1px; margin:0; padding:0; pointer-events:none; visibility:hidden}
+
+/* ---------- reveal-on-scroll ---------- */
+.reveal{opacity:0; transform:translateY(26px); transition:opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1);}
+.reveal.is-visible{opacity:1; transform:none}
+:root[data-motion="reduce"] .reveal{opacity:1!important; transform:none!important; transition:none!important}
+
+/* ---------- skip link ---------- */
+.skip-link{position:absolute; left:-999px; top:0; background:var(--ink); color:var(--paper); padding:10px 18px; z-index:999; border-radius:0 0 8px 0}
+.skip-link:focus{left:0}
+
+/* ================= HERO ================= */
+.hero{position:relative; min-height:100svh; display:flex; align-items:flex-end; overflow:hidden; background:#1c1712}
+.hero-media{position:absolute; inset:0}
+.hero-media img{width:100%; height:100%; object-fit:cover; object-position:center 32%; opacity:.92}
+.hero-scrim{position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,16,10,.15) 0%, rgba(20,16,10,.08) 40%, rgba(18,14,9,.72) 88%, rgba(14,11,7,.92) 100%)}
+.hero-inner{position:relative; z-index:2; width:100%; max-width:880px; margin:0 auto; padding:0 24px 64px; color:#FBF4E4; text-align:center}
+.hero-eyebrow{font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:500; font-size:14px; letter-spacing:.42em; text-transform:uppercase; color:#E7C892; margin-bottom:22px}
+.hero-title{font-family:"Noto Serif SC",serif; font-weight:600; font-size:clamp(30px,6vw,54px); line-height:1.35; letter-spacing:.02em; margin:0 0 18px}
+.hero-deck{font-family:"Noto Serif SC",serif; font-weight:400; font-size:16px; line-height:1.9; color:rgba(251,244,228,.82); max-width:480px; margin:0 auto 26px}
+.hero-dates{display:inline-block; font-family:"JetBrains Mono",monospace; font-size:13px; letter-spacing:.1em; color:#E7C892; border-top:1px solid rgba(231,200,146,.4); border-bottom:1px solid rgba(231,200,146,.4); padding:9px 22px; margin-bottom:34px}
+.hero-actions{display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap}
+.hero-music-btn{display:inline-flex; align-items:center; gap:10px; background:rgba(251,244,228,.1); border:1px solid rgba(251,244,228,.38); color:#FBF4E4; font-family:"Noto Serif SC",serif; font-size:14px; letter-spacing:.06em; padding:12px 24px; border-radius:40px; cursor:pointer; backdrop-filter:blur(6px); transition:background .2s, transform .2s}
+.hero-music-btn:hover{background:rgba(251,244,228,.18); transform:translateY(-1px)}
+.hero-music-btn .ico{width:16px; height:16px; flex-shrink:0}
+.scroll-cue{position:absolute; left:50%; bottom:22px; transform:translateX(-50%); z-index:2; color:rgba(251,244,228,.7); display:flex; flex-direction:column; align-items:center; gap:6px; font-size:11px; letter-spacing:.2em; font-family:"Cormorant Garamond",serif}
+.scroll-cue .bar{width:1px; height:30px; background:linear-gradient(180deg, rgba(251,244,228,.9), transparent); animation:scrollcue 2.4s ease-in-out infinite}
+:root[data-motion="reduce"] .scroll-cue .bar{animation:none}
+@keyframes scrollcue{0%{transform:scaleY(0); transform-origin:top} 50%{transform:scaleY(1); transform-origin:top} 51%{transform-origin:bottom} 100%{transform:scaleY(0); transform-origin:bottom}}
+
+/* ================= MUSIC PLAYER (persistent) ================= */
+.music-bar{position:fixed; left:50%; bottom:20px; transform:translateX(-50%); z-index:80; display:flex; align-items:center; gap:12px; background:rgba(250,246,236,.92); border:1px solid var(--line); box-shadow:var(--shadow-sm); border-radius:40px; padding:8px 10px 8px 8px; backdrop-filter:blur(10px); transition:opacity .3s, transform .3s}
+.music-bar[hidden]{display:none}
+.music-btn{width:38px; height:38px; border-radius:50%; border:none; background:var(--ink); color:var(--paper); display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0}
+.music-btn svg{width:14px; height:14px}
+.music-label{font-family:"Noto Serif SC",serif; font-size:12.5px; color:var(--ink-soft); white-space:nowrap; padding-right:6px}
+.music-vol{width:64px; accent-color:var(--accent-deep)}
+@media (max-width:560px){ .music-label{display:none} .music-bar{padding:8px} }
+
+/* ================= MAIN / CHAPTERS ================= */
+main{max-width:1160px; margin:0 auto; padding:0 20px}
+.chapter{padding:96px 0}
+.chapter:first-of-type{padding-top:80px}
+.chapter-head{max-width:640px; margin:0 auto 52px; text-align:center}
+.chapter-no{font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.3em; color:var(--accent-deep); margin-bottom:14px; display:block}
+.chapter-title{font-family:"Noto Serif SC",serif; font-weight:600; font-size:clamp(26px,4vw,38px); line-height:1.3; margin:0 0 10px}
+.chapter-en{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:14px; letter-spacing:.16em; color:var(--ink-faint); text-transform:uppercase; margin:0 0 20px}
+.chapter-intro{font-family:"Noto Serif SC",serif; font-size:16px; line-height:2; color:var(--ink-soft); margin:0}
+
+/* media frame: enforces aspect-ratio, prevents layout shift */
+.frame{position:relative; width:100%; overflow:hidden; background:var(--paper-dark); border-radius:var(--radius)}
+.frame img{width:100%; height:100%; object-fit:cover}
+figure{margin:0}
+figcaption{font-family:"Noto Serif SC",serif; font-size:14px; line-height:1.85; color:var(--ink-soft); margin-top:14px; max-width:46em}
+
+/* layout: full-bleed featured */
+.m-full{margin:0 auto 18px; max-width:920px}
+.m-full .frame{box-shadow:var(--shadow)}
+.m-full figcaption{text-align:center; margin-left:auto; margin-right:auto}
+
+/* layout: 2-up grid */
+.m-duo{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:0 auto 18px; max-width:980px}
+.m-duo .frame{box-shadow:var(--shadow-sm)}
+@media (max-width:680px){ .m-duo{grid-template-columns:1fr; gap:26px} }
+
+/* layout: 3-up filmstrip */
+.m-trio{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:0 auto 18px; max-width:1080px}
+.m-trio .frame{box-shadow:var(--shadow-sm)}
+@media (max-width:680px){ .m-trio{grid-template-columns:1fr 1fr; gap:14px} .m-trio > *:first-child{grid-column:1/-1} }
+
+/* layout: split text+image */
+.m-split{display:grid; grid-template-columns:0.9fr 1.1fr; gap:52px; align-items:center; max-width:1080px; margin:0 auto 18px}
+.m-split .frame{box-shadow:var(--shadow)}
+.m-split .split-text{font-family:"Noto Serif SC",serif; font-size:17px; line-height:2.05; color:var(--ink-soft)}
+.m-split .split-text .cap-eyebrow{display:block; font-family:"Cormorant Garamond",serif; font-style:italic; color:var(--accent-deep); font-size:13px; letter-spacing:.14em; margin-bottom:10px}
+@media (max-width:780px){ .m-split{grid-template-columns:1fr; gap:22px} .m-split.reverse .split-text{order:2} }
+
+.gap-lg{height:8px}
+
+/* video */
+.v-frame{position:relative; cursor:pointer}
+.v-frame video{width:100%; height:100%; object-fit:cover; background:#000}
+.v-poster{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .4s}
+.v-frame.is-playing .v-poster{opacity:0; pointer-events:none}
+.v-play{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:56px; height:56px; border-radius:50%; background:rgba(20,16,10,.5); border:1.5px solid rgba(251,244,228,.85); color:#FBF4E4; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:opacity .3s, transform .2s; backdrop-filter:blur(3px)}
+.v-play:hover{transform:translate(-50%,-50%) scale(1.06)}
+.v-play svg{width:18px; height:18px; margin-left:2px}
+.v-frame.is-playing .v-play{opacity:0; pointer-events:none}
+.v-badge{position:absolute; right:10px; bottom:10px; z-index:2; background:rgba(20,16,10,.55); color:#FBF4E4; font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.06em; padding:3px 9px; border-radius:20px; display:flex; align-items:center; gap:5px}
+.v-badge svg{width:9px; height:9px}
+
+/* estimated-time marker (quiet, dev-facing meaning kept subtle) */
+.time-note{font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--ink-faint); letter-spacing:.04em}
+
+/* quote breather */
+.m-quote{max-width:640px; margin:64px auto; text-align:center}
+.m-quote p{font-family:"Cormorant Garamond","Noto Serif SC",serif; font-style:italic; font-size:clamp(20px,2.6vw,26px); line-height:1.7; color:var(--accent-deep); margin:0}
+.m-quote .rule{width:40px; height:1px; background:var(--line); margin:22px auto 0}
+
+/* ================= CLOSING ================= */
+.closing-section{background:linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%); padding:100px 0 90px; margin-top:20px}
+.closing-inner{max-width:620px; margin:0 auto; text-align:center; padding:0 20px}
+.closing-inner .chapter-title{margin-bottom:26px}
+.closing-text{font-family:"Noto Serif SC",serif; font-size:17px; line-height:2.15; color:var(--ink-soft); margin:0 0 40px}
+.closing-links{display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:36px}
+.closing-link{font-family:"Noto Serif SC",serif; font-size:14px; letter-spacing:.04em; color:var(--accent-deep); text-decoration:none; border-bottom:1px solid var(--accent-soft); padding-bottom:3px; transition:opacity .2s}
+.closing-link:hover{opacity:.7}
+
+footer{padding:34px 20px 46px; text-align:center; font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.06em; color:var(--ink-faint)}
+
+/* prefers-reduced-motion: static poster only, no autoplay attempts styling change needed (handled in JS) */
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-media">
+    <img src="images/sunset-fishing-hero-full.jpg" alt="傍晚的堤岸，钓竿扬起，天边正好是落日" fetchpriority="high">
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">TANGASHIMA · 男鹿島</span>
+    <h1 class="hero-title">两天一夜的<br>海岛慢时光</h1>
+    <p class="hero-deck">出发、渡海、老街、海边、日落垂钓、满载而归——一段被认真收好的夏天。</p>
+    <div class="hero-dates">2026.07.21 — 07.22</div>
+    <div class="hero-actions">
+      <button class="hero-music-btn" id="music-toggle" type="button" aria-pressed="false">
+        <svg class="ico" id="music-ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3v18l14-9L6 3z" fill="currentColor" stroke="none"/></svg>
+        <svg class="ico" id="music-ico-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="display:none"><path d="M7 4h3v16H7zM14 4h3v16h-3z" fill="currentColor" stroke="none"/></svg>
+        <span id="music-btn-label">播放旅程音乐</span>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><span class="bar"></span></div>
+</header>
+
+<!-- ============ MUSIC BAR (appears after entering) ============ -->
+<div class="music-bar" id="music-bar" hidden>
+  <button class="music-btn" id="music-bar-toggle" type="button" aria-label="播放/暂停">
+    <svg viewBox="0 0 24 24" fill="currentColor" id="music-bar-ico"><path d="M6 3v18l14-9L6 3z"/></svg>
+  </button>
+  <span class="music-label" id="music-bar-label">旅程音乐</span>
+  <input type="range" class="music-vol" id="music-vol" min="0" max="1" step="0.01" value="0.5" aria-label="音量">
+</div>
+<!-- 背景音乐：3 段场景曲（voyage/island/reflection），随滚动位置自动切换。曲目取自用户的
+     02_BGM 个人收藏（钢琴/bossa/波音乐盒，纯器乐）；src 见下方 JS 的 TRACKS。默认不自动播放，
+     由用户点「播放旅程音乐」开启，符合浏览器策略。 -->
+<audio id="bgm-audio" preload="none" loop></audio>
+
+<main id="main">
+<span class="bgm-sentinel" data-bgm-region="voyage" aria-hidden="true"></span>
+
+<!-- ============ DEPARTURE ============ -->
+<section class="chapter reveal" id="departure">
+  <div class="chapter-head">
+    <span class="chapter-no">01 · DEPARTURE</span>
+    <h2 class="chapter-title">出发</h2>
+    <p class="chapter-en">Departure</p>
+    <p class="chapter-intro">清晨，三辆车从大阪出发，一路开向姫路港——十三个人的海岛行程，正式开始。</p>
+  </div>
+  <figure class="m-full reveal">
+    <div class="frame" style="aspect-ratio:900/675">
+      <img loading="lazy" decoding="async" src="images/departure-drive-grid.jpg" srcset="images/departure-drive-grid.jpg 900w, images/departure-drive-full.jpg 1800w" sizes="(max-width:960px) 92vw, 920px" alt="清晨出发，三辆车一路开向姫路港">
+    </div>
+    <figcaption>清晨出发，三辆车一路开向姫路港。</figcaption>
+  </figure>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/560">
+        <img loading="lazy" decoding="async" src="images/departure-onboard-grid.jpg" srcset="images/departure-onboard-grid.jpg 900w, images/departure-onboard-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="船上，救生衣穿好，准备出海">
+      </div>
+      <figcaption>船上，救生衣穿好，准备出海。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:1080/608" data-video="video/video-boat-wake.mp4" data-muted="true" data-dur="7.0">
+        <img class="v-poster" src="video/video-boat-wake-poster.jpg" loading="lazy" alt="船开动，白色的浪花在身后展开">
+        <video class="v-el" playsinline muted loop preload="none" poster="video/video-boat-wake-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg>7s</span>
+      </div>
+      <figcaption>船开动，白色的浪花在身后展开。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ARRIVAL ============ -->
+<section class="chapter reveal" id="arrival">
+  <div class="chapter-head">
+    <span class="chapter-no">02 · ARRIVAL</span>
+    <h2 class="chapter-title">抵达</h2>
+    <p class="chapter-en">Arrival</p>
+    <p class="chapter-intro">渡海、靠岸、小码头。刚上岛的第一餐，就把期待喂得很饱。</p>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:1080/608" data-video="video/video-clear-water.mp4" data-muted="true" data-dur="7.0">
+        <img class="v-poster" src="video/video-clear-water-poster.jpg" loading="lazy" alt="渡海途中，海水清得能看见水下的鱼">
+        <video class="v-el" playsinline muted loop preload="none" poster="video/video-clear-water-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg>7s</span>
+      </div>
+      <figcaption>渡海途中，海水清得能看见水下的鱼。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:320/568" data-video="video/video-harbor-dock.mp4" data-muted="true" data-dur="5.0">
+        <img class="v-poster" src="video/video-harbor-dock-poster.jpg" loading="lazy" alt="抵达岛上的小码头">
+        <video class="v-el" playsinline muted loop preload="none" poster="video/video-harbor-dock-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg>5s</span>
+      </div>
+      <figcaption>抵达岛上的小码头。</figcaption>
+    </figure>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/arrival-menu1-grid.jpg" srcset="images/arrival-menu1-grid.jpg 675w, images/arrival-menu1-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="抵达的照片">
+      </div>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/arrival-tempura-grid.jpg" srcset="images/arrival-tempura-grid.jpg 675w, images/arrival-tempura-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="鲑鱼刺身配着白色的鱼干，很鲜">
+      </div>
+      <figcaption>鲑鱼刺身配着白色的鱼干，很鲜。</figcaption>
+    </figure>
+  </div>
+  <figure class="m-full reveal" style="max-width:600px">
+    <div class="frame" style="aspect-ratio:675/900">
+      <img loading="lazy" decoding="async" src="images/arrival-sashimi1-grid.jpg" srcset="images/arrival-sashimi1-grid.jpg 675w, images/arrival-sashimi1-full.jpg 1350w" sizes="(max-width:680px) 92vw, 580px" alt="定食端上桌——天妇罗、生鱼片、白饭，样样都新鲜">
+    </div>
+    <figcaption>定食端上桌——天妇罗、生鱼片、白饭，样样都新鲜。</figcaption>
+  </figure>
+</section>
+
+<span class="bgm-sentinel" data-bgm-region="island" aria-hidden="true"></span>
+<!-- ============ GATHERING ============ -->
+<section class="chapter reveal" id="gathering">
+  <div class="m-split reveal">
+    <div class="split-text">
+      <span class="cap-eyebrow">03 · GATHERING</span>
+      <h2 class="chapter-title" style="text-align:left">相聚</h2>
+      <p>这次十三个人一起来，用的是リゾート的厨房，自己下厨，没有 BBQ——人多，饭桌也格外热闹。</p>
+    </div>
+    <div class="frame" style="aspect-ratio:900/567">
+      <img loading="lazy" decoding="async" src="images/gathering-table-grid.jpg" srcset="images/gathering-table-grid.jpg 900w, images/gathering-table-full.jpg 1800w" sizes="(max-width:780px) 92vw, 600px" alt="一大桌人凑在一起吃饭，靠海的窗边最热闹">
+    </div>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/567">
+        <img loading="lazy" decoding="async" src="images/gathering-family1-grid.jpg" srcset="images/gathering-family1-grid.jpg 900w, images/gathering-family1-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="一家人整整齐齐">
+      </div>
+      <figcaption>一家人整整齐齐。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/567">
+        <img loading="lazy" decoding="async" src="images/gathering-family2-grid.jpg" srcset="images/gathering-family2-grid.jpg 900w, images/gathering-family2-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="相聚的照片">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ VILLAGE ============ -->
+<section class="chapter reveal" id="village">
+  <div class="chapter-head">
+    <span class="chapter-no">04 · THE OLD VILLAGE</span>
+    <h2 class="chapter-title">老街漫步</h2>
+    <p class="chapter-en">Wandering the Old Village</p>
+    <p class="chapter-intro">饭后沿着水道慢慢走，岛上的老街安静得只剩脚步声。</p>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:804/900">
+        <img loading="lazy" decoding="async" src="images/village-alley1-grid.jpg" srcset="images/village-alley1-grid.jpg 804w, images/village-alley1-full.jpg 1607w" sizes="(max-width:680px) 92vw, 460px" alt="岛上的老街，安静得只剩脚步声">
+      </div>
+      <figcaption>岛上的老街，安静得只剩脚步声。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/village-corner-grid.jpg" srcset="images/village-corner-grid.jpg 675w, images/village-corner-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="老街漫步的照片">
+      </div>
+    </figure>
+  </div>
+  <figure class="m-full reveal" style="max-width:560px">
+    <div class="frame" style="aspect-ratio:675/900">
+      <img loading="lazy" decoding="async" src="images/village-stairs-view-grid.jpg" srcset="images/village-stairs-view-grid.jpg 675w, images/village-stairs-view-full.jpg 1350w" sizes="(max-width:680px) 92vw, 540px" alt="沿着石阶慢慢往上走">
+    </div>
+    <figcaption>沿着石阶慢慢往上走。</figcaption>
+  </figure>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/675">
+        <img loading="lazy" decoding="async" src="images/village-canal-grid.jpg" srcset="images/village-canal-grid.jpg 900w, images/village-canal-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="沿着水道慢慢走">
+      </div>
+      <figcaption>沿着水道慢慢走。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/675">
+        <img loading="lazy" decoding="async" src="images/village-window-grid.jpg" srcset="images/village-window-grid.jpg 900w" sizes="(max-width:680px) 92vw, 460px" alt="路边人家窗台上的小摆设">
+      </div>
+      <figcaption>路边人家窗台上的小摆设。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ BEACH ============ -->
+<section class="chapter reveal" id="beach">
+  <div class="m-split reverse reveal">
+    <div class="split-text">
+      <span class="cap-eyebrow">05 · AFTERNOON BY THE SEA</span>
+      <h2 class="chapter-title" style="text-align:left">海边时光</h2>
+      <p>沙滩上支起帐篷，海水浴的下午开始了。孩子们在浅水区玩得起劲，大人们乐得清闲。</p>
+    </div>
+    <div class="frame" style="aspect-ratio:900/675">
+      <img loading="lazy" decoding="async" src="images/beach-tent-grid.jpg" srcset="images/beach-tent-grid.jpg 900w, images/beach-tent-full.jpg 1800w" sizes="(max-width:780px) 92vw, 600px" alt="沙滩上支起帐篷，海水浴的下午开始了">
+    </div>
+  </div>
+  <figure class="m-full reveal">
+    <div class="frame" style="aspect-ratio:900/675">
+      <img loading="lazy" decoding="async" src="images/beach-swim-wide-grid.jpg" srcset="images/beach-swim-wide-grid.jpg 900w, images/beach-swim-wide-full.jpg 1800w" sizes="(max-width:960px) 92vw, 920px" alt="孩子们在浅水区玩得起劲">
+    </div>
+    <figcaption>孩子们在浅水区玩得起劲。</figcaption>
+  </figure>
+</section>
+
+<!-- ============ FEAST ============ -->
+<section class="chapter reveal" id="feast">
+  <div class="chapter-head">
+    <span class="chapter-no">06 · THE FEAST</span>
+    <h2 class="chapter-title">海鲜盛宴</h2>
+    <p class="chapter-en">The Feast</p>
+    <p class="chapter-intro">自己捞的鱼，自己下厨。刺身、天妇罗、海鲜盖饭——一桌都是刚从海里上来的鲜。</p>
+  </div>
+  <figure class="m-full reveal" style="max-width:560px">
+    <div class="frame" style="aspect-ratio:675/900">
+      <img loading="lazy" decoding="async" src="images/feast-sashimi-bowl-grid.jpg" srcset="images/feast-sashimi-bowl-grid.jpg 675w, images/feast-sashimi-bowl-full.jpg 1350w" sizes="(max-width:680px) 92vw, 540px" alt="自己捞的鱼，做成一碗满满的海鲜盖饭">
+    </div>
+    <figcaption style="text-align:center; margin-left:auto; margin-right:auto">自己捞的鱼，做成一碗满满的海鲜盖饭。</figcaption>
+  </figure>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/feast-sashimi2-grid.jpg" srcset="images/feast-sashimi2-grid.jpg 675w, images/feast-sashimi2-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="整鱼摆盘的生鱼片，鲜得发亮">
+      </div>
+      <figcaption>整鱼摆盘的生鱼片，鲜得发亮。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/feast-tempura2-grid.jpg" srcset="images/feast-tempura2-grid.jpg 675w, images/feast-tempura2-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="海鲜盛宴的照片">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SUNSET (quiet, since hero already carried the peak image) ============ -->
+<section class="chapter reveal" id="sunset">
+  <div class="m-quote reveal">
+    <p>"傍晚的堤岸，钓竿扬起，天边正好是落日。"</p>
+    <div class="rule"></div>
+  </div>
+  <figure class="m-full reveal" style="max-width:420px">
+    <div class="frame" style="aspect-ratio:675/900">
+      <img loading="lazy" decoding="async" src="images/sunset-catch-board-grid.jpg" srcset="images/sunset-catch-board-grid.jpg 675w, images/sunset-catch-board-full.jpg 1280w" sizes="(max-width:480px) 92vw, 400px" alt="今晚的战果，写在木板上">
+    </div>
+    <figcaption style="text-align:center; margin-left:auto; margin-right:auto">今晚的战果，写在木板上。</figcaption>
+  </figure>
+</section>
+
+<!-- ============ DAY 2 ============ -->
+<section class="chapter reveal" id="day2">
+  <div class="chapter-head">
+    <span class="chapter-no">07 · DAY TWO</span>
+    <h2 class="chapter-title">第二天，再出海</h2>
+    <p class="chapter-en">Day Two, Back to Sea</p>
+    <p class="chapter-intro">第二天一早，潜水装备穿好，再次登船——这次是为了看看水面之下的男鹿岛。</p>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/beach-wetsuit-grid.jpg" srcset="images/beach-wetsuit-grid.jpg 675w, images/beach-wetsuit-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="第二天一早，潜水装备穿好，准备下海看看">
+      </div>
+      <figcaption>第二天一早，潜水装备穿好，准备下海看看。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:720/1280" data-video="video/video-diver-prep.mp4" data-muted="true" data-dur="4.0">
+        <img class="v-poster" src="video/video-diver-prep-poster.jpg" loading="lazy" alt="潜水装备穿戴整齐，走向海边">
+        <video class="v-el" playsinline muted loop preload="none" poster="video/video-diver-prep-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg>4s</span>
+      </div>
+      <figcaption>潜水装备穿戴整齐，走向海边。</figcaption>
+    </figure>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:675/900">
+        <img loading="lazy" decoding="async" src="images/day2-boat-departure-grid.jpg" srcset="images/day2-boat-departure-grid.jpg 675w, images/day2-boat-departure-full.jpg 1350w" sizes="(max-width:680px) 92vw, 460px" alt="再次登船出海">
+      </div>
+      <figcaption>再次登船出海。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:1080/1920" data-video="video/video-day2-boat.mp4" data-muted="true" data-dur="8.0">
+        <img class="v-poster" src="video/video-day2-boat-poster.jpg" loading="lazy" alt="第二天一早，再次出海">
+        <video class="v-el" playsinline muted loop preload="none" poster="video/video-day2-boat-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg>8s</span>
+      </div>
+      <figcaption>第二天一早，再次出海。</figcaption>
+    </figure>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/675">
+        <img loading="lazy" decoding="async" src="images/day2-swim-tube-grid.jpg" srcset="images/day2-swim-tube-grid.jpg 900w, images/day2-swim-tube-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="又下水了">
+      </div>
+      <figcaption>又下水了。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/675">
+        <img loading="lazy" decoding="async" src="images/day2-noodle-lunch-grid.jpg" srcset="images/day2-noodle-lunch-grid.jpg 900w, images/day2-noodle-lunch-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="码头边的一碗面，简单又满足">
+      </div>
+      <figcaption>码头边的一碗面，简单又满足。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<span class="bgm-sentinel" data-bgm-region="reflection" aria-hidden="true"></span>
+<!-- ============ HARVEST ============ -->
+<section class="chapter reveal" id="harvest">
+  <div class="chapter-head">
+    <span class="chapter-no">08 · A FULL CATCH</span>
+    <h2 class="chapter-title">满载而归</h2>
+    <p class="chapter-en">A Full Catch</p>
+    <p class="chapter-intro">傍晚，孩子也在堤岸边拿起了钓竿——太阳快落山时，鱼竿突然弯成一张弓，上钩了！船上一网又一网，分拣、装桶，这天满载而归。</p>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/675">
+        <img loading="lazy" decoding="async" src="images/harvest-kid-catch-grid.jpg" srcset="images/harvest-kid-catch-grid.jpg 900w, images/harvest-kid-catch-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="小朋友第一次在堤岸边认真钓鱼">
+      </div>
+      <figcaption>小朋友第一次在堤岸边认真钓鱼。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:720/1280" data-video="video/video-kids-fishing-pier.mp4" data-muted="false" data-dur="11.0">
+        <img class="v-poster" src="video/video-kids-fishing-pier-poster.jpg" loading="lazy" alt="太阳快落山时，孩子的鱼竿弯成一张弓，鱼上钩了">
+        <video class="v-el" playsinline loop preload="none" poster="video/video-kids-fishing-pier-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频（含现场声音）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>11s</span>
+      </div>
+      <figcaption>太阳快落山时，孩子的鱼竿突然弯成一张弓——上钩了！</figcaption>
+    </figure>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:544/960" data-video="video/video-net-sorting.mp4" data-muted="false" data-dur="9.0">
+        <img class="v-poster" src="video/video-net-sorting-poster.jpg" loading="lazy" alt="满满一网渔获，分拣进桶里">
+        <video class="v-el" playsinline loop preload="none" poster="video/video-net-sorting-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频（含现场声音）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>9s</span>
+      </div>
+      <figcaption>船上一网又一网，分拣进桶里。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="frame" style="aspect-ratio:900/675">
+        <img loading="lazy" decoding="async" src="images/harvest-boat-group-grid.jpg" srcset="images/harvest-boat-group-grid.jpg 900w, images/harvest-boat-group-full.jpg 1800w" sizes="(max-width:680px) 92vw, 460px" alt="一家人挤在船头，橙色救生衣格外显眼">
+      </div>
+      <figcaption>一家人挤在船头，橙色救生衣格外显眼。</figcaption>
+    </figure>
+  </div>
+  <div class="m-duo">
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:720/1280" data-video="video/video-woman-wave.mp4" data-muted="false" data-dur="7.0">
+        <img class="v-poster" src="video/video-woman-wave-poster.jpg" loading="lazy" alt="船上，妈妈笑着挥手">
+        <video class="v-el" playsinline loop preload="none" poster="video/video-woman-wave-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频（含现场声音）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>7s</span>
+      </div>
+      <figcaption>船上，妈妈笑着挥手。</figcaption>
+    </figure>
+    <figure class="reveal">
+      <div class="v-frame frame" style="aspect-ratio:1080/608" data-video="video/video-family-boat-return.mp4" data-muted="false" data-dur="6.0">
+        <img class="v-poster" src="video/video-family-boat-return-poster.jpg" loading="lazy" alt="满载而归，一家人挤在船头">
+        <video class="v-el" playsinline loop preload="none" poster="video/video-family-boat-return-poster.jpg"></video>
+        <button class="v-play" type="button" aria-label="播放视频（含现场声音）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+        <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>6s</span>
+      </div>
+      <figcaption>满载而归，一家人挤在船头。</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing-section reveal" id="closing">
+  <div class="closing-inner">
+    <span class="chapter-no">09 · LOOKING BACK</span>
+    <h2 class="chapter-title">回望</h2>
+    <p class="chapter-en">Looking Back</p>
+    <p class="closing-text">两天一夜，不长，但从出发的清晨到满载而归的傍晚，每一格都留下来了——海风、渔获、笑声，和一起看过的那场日落。这是一段被认真收好的夏天。</p>
+  </div>
+  <figure class="m-full reveal" style="margin-top:20px">
+    <div class="frame" style="aspect-ratio:900/574">
+      <img loading="lazy" decoding="async" src="images/closing-beach-eve-grid.jpg" srcset="images/closing-beach-eve-grid.jpg 900w, images/closing-beach-eve-full.jpg 1800w" sizes="(max-width:960px) 92vw, 920px" alt="海岛的黄昏，安静得像一幅画">
+    </div>
+    <figcaption style="text-align:center; margin-left:auto; margin-right:auto">海岛的黄昏，安静得像一幅画。</figcaption>
+  </figure>
+  <figure class="m-full reveal" style="max-width:420px; margin-top:18px">
+    <div class="v-frame frame" style="aspect-ratio:540/960" data-video="video/video-palm-beach.mp4" data-muted="true" data-dur="6.0">
+      <img class="v-poster" src="video/video-palm-beach-poster.jpg" loading="lazy" alt="离开前，最后看一眼这片海滩">
+      <video class="v-el" playsinline muted loop preload="none" poster="video/video-palm-beach-poster.jpg"></video>
+      <button class="v-play" type="button" aria-label="播放视频"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg></button>
+      <span class="v-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3v18l14-9L6 3z"/></svg>6s</span>
+    </div>
+    <figcaption style="text-align:center; margin-left:auto; margin-right:auto">离开前，最后看一眼这片海滩。</figcaption>
+  </figure>
+  <div class="closing-inner">
+    <div class="closing-links">
+      <a class="closing-link" href="../index.html">← 查看行前攻略</a>
+      <a class="closing-link" href="#" onclick="window.scrollTo({top:0,behavior:document.documentElement.getAttribute('data-motion')==='reduce'?'auto':'smooth'}); return false;">回到开头 ↑</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  为 Angela 一家记录 · 男鹿島 · 2026年7月21–22日
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = function(){ return document.documentElement.getAttribute('data-motion') === 'reduce'; };
+
+  /* ---------- reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('is-visible');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- video: lazy-load + play/pause ---------- */
+  var vFrames = Array.prototype.slice.call(document.querySelectorAll('.v-frame'));
+  var loadedSrc = new WeakSet();
+
+  function ensureLoaded(frame){
+    var video = frame.querySelector('.v-el');
+    if(loadedSrc.has(video)) return;
+    video.src = frame.getAttribute('data-video');
+    video.load();
+    loadedSrc.add(video);
+  }
+
+  function playFrame(frame){
+    var video = frame.querySelector('.v-el');
+    ensureLoaded(frame);
+    var muted = frame.getAttribute('data-muted') === 'true';
+    video.muted = muted;
+    var p = video.play();
+    if(p && p.catch){ p.catch(function(){ /* needs explicit tap; button remains visible via lack of is-playing */ }); }
+    frame.classList.add('is-playing');
+  }
+  function pauseFrame(frame){
+    var video = frame.querySelector('.v-el');
+    video.pause();
+    frame.classList.remove('is-playing');
+  }
+
+  vFrames.forEach(function(frame){
+    var playBtn = frame.querySelector('.v-play');
+    var video = frame.querySelector('.v-el');
+    var autoMuted = frame.getAttribute('data-muted') === 'true';
+
+    // explicit tap always works (covers muted+unmuted, and satisfies "must allow pause")
+    playBtn.addEventListener('click', function(){
+      if(frame.classList.contains('is-playing')){ pauseFrame(frame); }
+      else { playFrame(frame); }
+    });
+    frame.addEventListener('click', function(e){
+      if(e.target === playBtn || playBtn.contains(e.target)) return;
+      if(frame.classList.contains('is-playing')){ pauseFrame(frame); }
+    });
+    video.addEventListener('ended', function(){ /* loop=true normally handles this, safety no-op */ });
+
+    // lazy-load poster→video only when entering viewport; auto-play ONLY for muted clips
+    if('IntersectionObserver' in window){
+      var vio = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            if(autoMuted && !reduceMotion()){
+              playFrame(frame);
+            } else if(autoMuted && reduceMotion()){
+              ensureLoaded(frame); // load but don't force autoplay motion when reduced-motion is set
+            }
+          } else {
+            if(frame.classList.contains('is-playing')) pauseFrame(frame);
+          }
+        });
+      }, {threshold:0.55});
+      vio.observe(frame);
+    }
+  });
+
+  /* ---------- scene-based background music ----------
+     3 scene tracks (extracted from the user's own 02_BGM collection), switched by scroll position:
+       voyage 启程·渡海 (hero→arrival) · island 岛上·时光 (gathering→day2) · reflection 满载·回望 (harvest→closing)
+     Default OFF (browser policy + taste); user taps "播放旅程音乐" to start.
+     Switching: scroll-position sentinels (NOT IntersectionObserver — unreliable on fast scroll) +
+     step-count crossfade (NOT volume-value — iOS Safari audio.volume is read-only). */
+  var TRACKS = {
+    voyage:     { src: 'audio/bgm-a-voyage.m4a',     label: '启程 · 渡海' },
+    island:     { src: 'audio/bgm-b-island.m4a',     label: '岛上 · 时光' },
+    reflection: { src: 'audio/bgm-c-reflection.m4a', label: '满载 · 回望' }
+  };
+  var REGIONS = ['voyage','island','reflection'];
+  var audio = document.getElementById('bgm-audio');
+  var heroBtn = document.getElementById('music-toggle');
+  var heroLabel = document.getElementById('music-btn-label');
+  var iconPlay = document.getElementById('music-ico-play');
+  var iconPause = document.getElementById('music-ico-pause');
+  var bar = document.getElementById('music-bar');
+  var barBtn = document.getElementById('music-bar-toggle');
+  var barIco = document.getElementById('music-bar-ico');
+  var barLabel = document.getElementById('music-bar-label');
+  var vol = document.getElementById('music-vol');
+
+  var TARGET_VOL = parseFloat(vol.value);   // desktop volume (iOS ignores set, always reads 1)
+  var wantsPlaying = false;                 // user has opted in
+  var userStopped = false;                  // user explicitly stopped → no auto-resume
+  var currentRegion = null;
+  audio.loop = true;
+  var sentinels = Array.prototype.slice.call(document.querySelectorAll('.bgm-sentinel[data-bgm-region]'));
+
+  function updateBarLabel(isPlaying){
+    var name = currentRegion && TRACKS[currentRegion] ? TRACKS[currentRegion].label : '旅程音乐';
+    barLabel.textContent = isPlaying ? ('♪ ' + name) : '旅程音乐';
+  }
+  function setPlayingUI(isPlaying){
+    iconPlay.style.display = isPlaying ? 'none' : '';
+    iconPause.style.display = isPlaying ? '' : 'none';
+    heroLabel.textContent = isPlaying ? '暂停音乐' : '播放旅程音乐';
+    heroBtn.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+    barIco.innerHTML = isPlaying ? '<path d="M7 4h3v16H7zM14 4h3v16h-3z"/>' : '<path d="M6 3v18l14-9L6 3z"/>';
+    updateBarLabel(isPlaying);
+  }
+  function tryPlay(){ var p = audio.play(); if(p && p.catch) p.catch(function(){}); }
+
+  var fadeTimer = null, FADE_STEPS = 9, preDuckVolume = null;
+  function switchRegion(region){
+    if(!TRACKS[region] || region === currentRegion) return;
+    currentRegion = region;
+    updateBarLabel(wantsPlaying && !audio.paused);
+    if(!wantsPlaying){ audio.src = TRACKS[region].src; return; } // not playing yet — just arm the src
+    if(fadeTimer) clearInterval(fadeTimer);
+    var outStep = 0;
+    fadeTimer = setInterval(function(){
+      outStep++;
+      audio.volume = Math.max(0, TARGET_VOL * (1 - outStep / FADE_STEPS)); // desktop fade; iOS no-op
+      if(outStep >= FADE_STEPS){                                            // ★ step-driven, not volume-value
+        clearInterval(fadeTimer);
+        audio.src = TRACKS[region].src;
+        try { audio.currentTime = 0; } catch(e){}
+        preDuckVolume = null;
+        tryPlay();
+        var inStep = 0;
+        fadeTimer = setInterval(function(){
+          inStep++;
+          audio.volume = Math.min(TARGET_VOL, TARGET_VOL * inStep / FADE_STEPS);
+          if(inStep >= FADE_STEPS) clearInterval(fadeTimer);
+        }, 60);
+      }
+    }, 60);
+  }
+
+  function pickRegionByScroll(){
+    if(!sentinels.length) return;
+    var line = window.innerHeight * 0.5;
+    var active = REGIONS[0];  // default voyage — covers hero / top
+    sentinels.forEach(function(el){
+      if(el.getBoundingClientRect().top <= line) active = el.getAttribute('data-bgm-region');
+    });
+    switchRegion(active);
+  }
+  var scrollScheduled = false;
+  window.addEventListener('scroll', function(){
+    if(scrollScheduled) return;
+    scrollScheduled = true;
+    // setTimeout (not rAF) so switching still works when the tab is briefly backgrounded
+    setTimeout(function(){ scrollScheduled = false; pickRegionByScroll(); }, 80);
+  }, {passive:true});
+
+  function startMusic(){
+    if(!currentRegion) pickRegionByScroll();
+    if(!currentRegion) currentRegion = REGIONS[0];
+    if(!audio.src) audio.src = TRACKS[currentRegion].src;
+    wantsPlaying = true; userStopped = false;
+    audio.volume = TARGET_VOL;
+    tryPlay();
+  }
+  function stopMusic(){ wantsPlaying = false; userStopped = true; audio.pause(); }
+  function toggleMusic(){ if(!wantsPlaying || audio.paused) startMusic(); else stopMusic(); }
+
+  heroBtn.addEventListener('click', function(){ bar.hidden = false; toggleMusic(); });
+  barBtn.addEventListener('click', toggleMusic);
+  vol.addEventListener('input', function(){ TARGET_VOL = parseFloat(vol.value); if(preDuckVolume===null) audio.volume = TARGET_VOL; });
+  audio.addEventListener('play', function(){ setPlayingUI(true); });
+  audio.addEventListener('pause', function(){ setPlayingUI(false); });
+
+  // natural-interaction fallback: if user opted in but autoplay got blocked, resume on any gesture
+  function resumeOnGesture(){ if(wantsPlaying && !userStopped && audio.paused) tryPlay(); }
+  ['pointerdown','touchstart','keydown','wheel'].forEach(function(evt){
+    window.addEventListener(evt, resumeOnGesture, {passive:true});
+  });
+
+  // duck bgm when an unmuted (has real audio) moment video plays; restore after
+  vFrames.forEach(function(frame){
+    var video = frame.querySelector('.v-el');
+    if(frame.getAttribute('data-muted') !== 'false') return;
+    function restore(){ if(preDuckVolume !== null){ audio.volume = preDuckVolume; preDuckVolume = null; } }
+    video.addEventListener('play', function(){
+      if(wantsPlaying && !audio.paused && preDuckVolume === null){
+        preDuckVolume = TARGET_VOL;
+        audio.volume = Math.min(audio.volume, 0.10);
+      }
+    });
+    video.addEventListener('pause', restore);
+    video.addEventListener('ended', restore);
+  });
+
+  // arm the initial region + reveal the floating bar once past the hero
+  pickRegionByScroll();
+  var heroEl = document.querySelector('.hero');
+  if('IntersectionObserver' in window && heroEl){
+    var hio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(!en.isIntersecting) bar.hidden = false; });
+    }, {threshold:0});
+    hio.observe(heroEl);
+  }
+})();
+</script>
+</body>
+</html>

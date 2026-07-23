@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "feast-sashimi2",
+    "grid": "675x900",
+    "full": "1350x1800"
+  },
+  {
+    "slug": "feast-tempura2",
+    "grid": "675x900",
+    "full": "1350x1800"
+  },
+  {
+    "slug": "gathering-table",
+    "grid": "900x567",
+    "full": "1800x1134"
+  },
+  {
+    "slug": "beach-wetsuit",
+    "grid": "675x900",
+    "full": "1350x1800"
+  },
+  {
+    "slug": "harvest-boat-group",
+    "grid": "900x675",
+    "full": "1800x1350"
+  }
+]
